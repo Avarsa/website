@@ -1,0 +1,164 @@
+<!-- base_template: jinish_website/www/templates/jinish_base.html -->
+{% extends "jinish_website/www/templates/jinish_base.html" %}
+
+{% block page_content %}
+<!-- Blog Header with clean, professional design -->
+<header class="bg-white border-bottom py-4">
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-12">
+                <a href="/posts" class="text-muted d-inline-flex align-items-center mb-3">
+                    <i class="ti ti-arrow-left me-2"></i>
+                    Back to Posts
+                </a>
+                <h1 class="h2 mb-1">{{ doc.title }}</h1>
+            </div>
+            <div class="col-12">
+                <div class="d-flex flex-wrap gap-3 text-muted">
+                    <div class="d-flex align-items-center">
+                        <i class="ti ti-calendar me-2 opacity-70"></i>
+                        {{ doc.creation.strftime('%b %d, %Y') }}
+                    </div>
+                    {% if doc.blogger %}
+                    <div class="d-flex align-items-center">
+                        <i class="ti ti-user me-2 opacity-70"></i>
+                        {{ doc.blogger }}
+                    </div>
+                    {% endif %}
+                    {% if doc.blog_category %}
+                    <div class="d-flex align-items-center">
+                        <i class="ti ti-tag me-2 opacity-70"></i>
+                        {{ doc.blog_category }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Blog Content -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            {% if doc.meta_image %}
+            <div class="mb-4">
+                <img src="{{ doc.meta_image }}" alt="{{ doc.title }}" class="img-fluid rounded w-100" style="max-height: 450px; object-fit: cover;">
+            </div>
+            {% endif %}
+            <div class="blog-content">
+                {{ doc.content }}
+            </div>
+            
+            <!-- Blog Footer -->
+            <div class="border-top mt-5 pt-4">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <div>
+                        {% if doc.blog_category %}
+                        <a href="/posts" class="badge bg-primary-subtle text-primary py-2 px-3 text-decoration-none">
+                            <i class="ti ti-tag me-1"></i>
+                            {{ doc.blog_category }}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <a href="/posts" class="btn btn-outline-primary px-4">
+                            <i class="ti ti-chevron-left me-1"></i>
+                            All Posts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Related Posts -->
+{% if related_blogs and related_blogs|length > 0 %}
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Related Posts</h2>
+        <div class="row row-cards">
+            {% for blog in related_blogs %}
+            <div class="col-md-4">
+                <a href="/post?name={{ blog.name }}" class="card card-hover h-100 text-decoration-none">
+                    <div class="card-body">
+                        <h3 class="card-title h5">{{ blog.title }}</h3>
+                        <p class="card-text text-muted">{{ blog.blog_intro }}</p>
+                        <div class="text-primary mt-auto pt-2 d-flex align-items-center">
+                            <span class="me-2">Read More</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<style>
+/* Just a few essential styles that can't be replaced with Tabler classes */
+.blog-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--heading-color);
+    letter-spacing: -0.01em;
+}
+
+.blog-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.75rem 0 1rem;
+    color: var(--heading-color);
+    letter-spacing: -0.01em;
+}
+
+.blog-content ul, .blog-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Card hover animation */
+.card-hover {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(10, 25, 47, 0.1);
+}
+</style>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add smooth scrolling behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

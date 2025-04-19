@@ -1,0 +1,133 @@
+<!-- base_template: jinish_website/www/templates/jinish_base.html -->
+{% extends "jinish_website/www/templates/jinish_base.html" %}
+
+{% block page_content %}
+<!-- Blog Header Section -->
+<div class="bg-primary text-white py-2">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <div class="font-monospace fs-4">// thoughts & notes</div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-4">
+    <!-- Filter Section for Categories -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-primary px-4 py-2 active" data-filter="all">All Posts</button>
+                {% set categories = frappe.get_all('Blog Category', fields=['name']) %}
+                {% for category in categories %}
+                    <button class="btn btn-outline-primary px-4 py-2" data-filter="{{ category.name|lower }}">{{ category.name }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blog Grid - Display all posts -->
+    <div class="row row-cards" id="blog-grid">
+        {% if blogs %}
+            {% for blog in blogs %}
+                <div class="col-md-6 col-lg-4" data-category="{% if blog.blog_category %}{{ blog.blog_category|lower }}{% else %}uncategorized{% endif %}">
+                    <div class="card h-100 card-hover shadow-sm">
+                        {% if blog.meta_image %}
+                            <img src="{{ blog.meta_image }}" alt="{{ blog.title }}" class="card-img-top" style="height: 160px; object-fit: cover;">
+                        {% else %}
+                            <img src="/assets/jinish_website/images/blog-placeholder.jpg" alt="{{ blog.title }}" class="card-img-top" style="height: 160px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            {% if blog.blog_category %}
+                                <span class="badge bg-light text-primary mb-2 px-3 py-1">{{ blog.blog_category }}</span>
+                            {% else %}
+                                <span class="badge bg-light text-primary mb-2 px-3 py-1">Uncategorized</span>
+                            {% endif %}
+                            <h3 class="card-title h5 mb-2">{{ blog.title }}</h3>
+                            <div class="d-flex align-items-center text-muted fs-sm mb-3">
+                                <div class="me-3">
+                                    <i class="ti ti-calendar me-1"></i>
+                                    {{ blog.creation.strftime('%b %d, %Y') }}
+                                </div>
+                                <div>
+                                    <i class="ti ti-user me-1"></i>
+                                    {% if blog.blogger %}{{ blog.blogger }}{% else %}Jinish Chandrababu{% endif %}
+                                </div>
+                            </div>
+                            <p class="card-text text-muted flex-grow-1">{{ blog.blog_intro }}</p>
+                            <a href="/post?name={{ blog.name }}" class="btn btn-outline-primary px-4 py-2 w-100 mt-2">
+                                Read More
+                                <i class="ti ti-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12">
+                <div class="card card-body empty">
+                    <div class="empty-img text-center mb-4">
+                        <i class="ti ti-article-off fs-1 text-muted"></i>
+                    </div>
+                    <p class="empty-title text-center h3">No blog posts found</p>
+                    <p class="empty-subtitle text-center text-muted">Check back soon for new content or try adjusting your filters.</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Pagination -->
+    {% if blogs and blogs|length > 10 %}
+    <div class="d-flex justify-content-center mt-5">
+        <ul class="pagination">
+            <li class="page-item">
+                <a href="#" class="page-link">
+                    <i class="ti ti-chevron-left"></i>
+                </a>
+            </li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            {% if blogs|length > 20 %}
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            {% endif %}
+            <li class="page-item">
+                <a href="#" class="page-link">
+                    <i class="ti ti-chevron-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const blogCards = document.querySelectorAll('#blog-grid > [data-category]');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filter = this.getAttribute('data-filter');
+                
+                // Show/hide blog cards based on filter
+                blogCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

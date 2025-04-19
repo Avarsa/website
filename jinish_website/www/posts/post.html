@@ -1,0 +1,396 @@
+{% extends "jinish_website/www/templates/jinish_base.html" %}
+
+{% block style %}
+{{ super() }}
+<!-- Additional CSS for individual blog post page -->
+<style>
+:root {
+    --primary-color: #0a192f;
+    --accent-color: #64ffda;
+    --text-color: #ccd6f6;
+    --text-secondary: #8892b0;
+    --bg-color: #0a192f;
+    --card-bg: rgba(2, 12, 27, 0.7);
+    --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', monospace, sans-serif;
+}
+
+.page-wrapper {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Blog post header */
+.blog-header {
+    padding: 6rem 0 3rem;
+    position: relative;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.blog-header-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(10, 25, 47, 0.9) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 25, 47, 0.9) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.blog-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-meta-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.blog-meta-item i {
+    margin-right: 0.5rem;
+}
+
+.blog-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Blog content */
+.blog-content-wrapper {
+    padding: 3rem 0 6rem;
+    position: relative;
+}
+
+.blog-content {
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    padding: 2.5rem;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.blog-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: var(--text-color);
+}
+
+.blog-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-color);
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.blog-content ul, 
+.blog-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-color);
+    transition: var(--transition);
+}
+
+.blog-content a:hover {
+    border-bottom-style: solid;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.blog-content code {
+    font-family: monospace;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.blog-content pre {
+    background-color: #1e293b;
+    border-radius: 4px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.blog-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #e2e8f0;
+}
+
+.blog-content img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+/* Blog footer */
+.blog-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.blog-tag {
+    font-size: 0.8rem;
+    font-family: monospace;
+    padding: 0.3rem 0.75rem;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.blog-tag:hover {
+    background-color: rgba(100, 255, 218, 0.2);
+}
+
+.blog-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.blog-nav-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.blog-nav-item:hover {
+    color: var(--accent-color);
+}
+
+.blog-nav-item.prev i {
+    margin-right: 0.5rem;
+}
+
+.blog-nav-item.next {
+    text-align: right;
+}
+
+.blog-nav-item.next i {
+    margin-left: 0.5rem;
+}
+
+.blog-nav-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.blog-nav-title {
+    font-weight: 500;
+}
+
+/* Back to blogs button */
+.back-to-blogs {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.back-to-blogs i {
+    margin-right: 0.5rem;
+}
+
+.back-to-blogs:hover {
+    transform: translateX(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .blog-featured-image {
+        height: 250px;
+    }
+    
+    .blog-content {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<!-- Blog Header -->
+<header class="blog-header">
+    <div class="blog-header-grid"></div>
+    <div class="container">
+        <a href="/posts" class="back-to-blogs">
+            <i class="ti ti-arrow-left"></i> Back to all posts
+        </a>
+        
+        <h1 class="blog-title">{{ doc.title }}</h1>
+        
+        <div class="blog-meta">
+            <div class="blog-meta-item">
+                <i class="ti ti-calendar"></i>
+                {{ frappe.format_date(doc.creation) }}
+            </div>
+            
+            {% if doc.blogger %}
+            <div class="blog-meta-item">
+                <i class="ti ti-user"></i>
+                {{ frappe.db.get_value("Blogger", doc.blogger, "full_name") or doc.blogger }}
+            </div>
+            {% endif %}
+            
+            {% if doc.blog_category %}
+            <div class="blog-meta-item">
+                <i class="ti ti-tag"></i>
+                {{ doc.blog_category }}
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if doc.meta_image %}
+        <img src="{{ doc.meta_image }}" alt="{{ doc.title }}" class="blog-featured-image">
+        {% endif %}
+    </div>
+</header>
+
+<!-- Blog Content -->
+<section class="blog-content-wrapper">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="blog-content">
+                    {{ doc.content }}
+                    
+                    <div class="blog-footer">
+                        <!-- Tags section removed since the field doesn't exist -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Posts (Optional) -->
+<section class="related-posts-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="section-title">Related Posts</h2>
+                
+                <div class="row">
+                    {% set related_posts = frappe.get_all('Blog Post', 
+                        fields=['title', 'blog_intro', 'creation', 'route', 'meta_image'], 
+                        filters={
+                            'published': 1,
+                            'name': ['!=', doc.name],
+                            'blog_category': doc.blog_category
+                        },
+                        limit=3,
+                        order_by='creation desc') %}
+                    
+                    {% if related_posts %}
+                        {% for post in related_posts %}
+                        <div class="col-md-4">
+                            <div class="blog-card">
+                                <div class="blog-image">
+                                    {% if post.meta_image %}
+                                    <img src="{{ post.meta_image }}" alt="{{ post.title }}">
+                                    {% else %}
+                                    <img src="/assets/jinish_website/images/blog-placeholder.jpg" alt="{{ post.title }}">
+                                    {% endif %}
+                                </div>
+                                <div class="blog-content">
+                                    <h3 class="blog-title">{{ post.title }}</h3>
+                                    <div class="blog-meta">
+                                        <div class="blog-meta-item">
+                                            <i class="ti ti-calendar"></i>
+                                            {{ frappe.format_date(post.creation) }}
+                                        </div>
+                                    </div>
+                                    <a href="/posts/{{ post.route or post.name }}" class="read-more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="col-12 text-center">
+                            <p class="text-muted">No related posts found.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

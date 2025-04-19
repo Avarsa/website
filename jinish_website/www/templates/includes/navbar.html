@@ -1,0 +1,78 @@
+<!-- Navbar -->
+<header class="navbar navbar-expand-md d-print-none no-print">
+    <div class="container-xl">
+        <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="/">
+                <div class="d-flex align-items-center">
+                    <span class="font-weight-bold">Jinish<span class="text-primary">.</span></span>
+                </div>
+            </a>
+        </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">
+                            Work
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/posts">
+                            Posts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Remove all styling from active nav links */
+.navbar .nav-link.active,
+.navbar-nav .nav-link.active {
+  background: none !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  font-weight: inherit !important;
+}
+
+/* Remove hover effects on active items */
+.navbar .nav-link.active:hover,
+.navbar-nav .nav-link.active:hover {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Remove any pseudo-elements */
+.navbar .nav-link.active::before,
+.navbar .nav-link.active::after,
+.navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link.active::after {
+  display: none !important;
+  content: none !important;
+}
+</style>

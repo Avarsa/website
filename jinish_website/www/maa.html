@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Recommendations for Jayasree</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+    .tabs { display: flex; justify-content: center; background: #333; }
+    .tab-button {
+      padding: 14px 20px;
+      cursor: pointer;
+      color: white;
+      background: #333;
+      border: none;
+      outline: none;
+      transition: background 0.3s;
+    }
+    .tab-button:hover, .tab-button.active { background: #555; }
+    .tab-content { display: none; padding: 20px; max-width: 1000px; margin: auto; background: white; }
+    .tab-content.active { display: block; }
+    h1 { text-align: center; color: #444; }
+    h2 { color: #2a6ebb; margin-top: 1em; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .note { font-size: 0.9em; color: #888; margin-top: 1em; }
+    .section { margin-top: 2em; }
+  </style>
+  <script>
+    function openTab(index) {
+      var contents = document.querySelectorAll('.tab-content');
+      var buttons = document.querySelectorAll('.tab-button');
+      contents.forEach((tab, i) => {
+        tab.classList.remove('active');
+        buttons[i].classList.remove('active');
+      });
+      contents[index].classList.add('active');
+      buttons[index].classList.add('active');
+    }
+    window.onload = () => openTab(0);
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-button" onclick="openTab(0)">English</button>
+    <button class="tab-button" onclick="openTab(1)">മലയാളം</button>
+  </div>
+
+  <div class="tab-content" id="english">
+    <h1>Diet and Lifestyle Guidance for Jayasree</h1>
+    <p class="note">This document is based on available scientific research and publicly accessible medical and nutritional data. It is not a substitute for professional medical advice from your doctor.</p>
+
+    <div class="section">
+      <h2>Understanding Blood Report Parameters</h2>
+      <ul>
+        <li><strong>Triglycerides (TG):</strong> High levels increase heart disease risk. Should ideally be below 150 mg/dL.</li>
+        <li><strong>LDL Cholesterol:</strong> 'Bad cholesterol'—can lead to arterial blockages. Keep it under 100 mg/dL.</li>
+        <li><strong>HDL Cholesterol:</strong> 'Good cholesterol'—protects your heart. Higher values (above 50 mg/dL) are good.</li>
+        <li><strong>Total Cholesterol:</strong> Should be under 200 mg/dL for heart safety.</li>
+        <li><strong>VLDL:</strong> Transports TG in the blood. Higher levels indicate higher TG and more risk.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Recommended Diet (with Timing)</h2>
+      <ul>
+        <li><strong>Early Morning (6:30–7:00 am):</strong> Warm water with lemon OR soaked methi seeds (good for lipid metabolism)</li>
+        <li><strong>Breakfast (8:00–8:30 am):</strong> Oats with fruits, or red rice idli with sambar (avoid coconut chutney)</li>
+        <li><strong>Mid-morning (10:30 am):</strong> 1 fruit (apple, papaya, orange, pear – avoid banana)</li>
+        <li><strong>Lunch (12:30–1:00 pm):</strong> Red rice or millets, 1 bowl sambar, vegetables (no frying), salad, 1 tsp olive oil</li>
+        <li><strong>Evening (4:00–5:00 pm):</strong> Buttermilk or green tea, roasted chana or sprouts</li>
+        <li><strong>Dinner (7:00–8:00 pm):</strong> Same as lunch or vegetable soup with 1 roti (multigrain)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Recommended Oils and Fats</h2>
+      <ul>
+        <li><strong>Olive Oil (Extra Virgin):</strong> High in MUFA, reduces LDL and increases HDL</li>
+        <li><strong>Groundnut Oil:</strong> Good alternative, high in MUFA</li>
+        <li><strong>Rice Bran Oil:</strong> Contains oryzanol, helps reduce cholesterol</li>
+        <li><strong>Mustard Oil:</strong> Anti-inflammatory and heart-friendly, especially good for Indian cooking</li>
+        <li><strong>AVOID:</strong> Coconut oil, palm oil, vanaspati, dalda, reused oil</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Kerala-specific Food Tips</h2>
+      <ul>
+        <li>Replace coconut oil with olive or mustard oil for daily use</li>
+        <li>Limit avial and thoran that use grated coconut. Use vegetables steamed or boiled</li>
+        <li>Use red rice, but control portion (1 cup cooked)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Scientific Backing</h2>
+      <ul>
+        <li><strong>MUFA (Monounsaturated Fatty Acids):</strong> Found in olive oil, helps reduce LDL, raises HDL. [Ref: AHA]</li>
+        <li><strong>Fiber-rich foods:</strong> Lower cholesterol and improve digestion. [Ref: NIH]</li>
+        <li><strong>Flavonoids in fruits:</strong> Help reduce oxidative stress and inflammation. [Ref: Harvard Med]</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content" id="malayalam">
+    <h1>ജയശ്രീയ്ക്കുള്ള ഭക്ഷണ ശൈലി നിർദ്ദേശങ്ങൾ</h1>
+    <p class="note">ഈ വിവരങ്ങൾ ആന്തരികമായ റിസർച്ച് അടിസ്ഥാനമാക്കിയുള്ളതാണ്. ഡോക്ടറുടെ അഭിപ്രായത്തിന് പകരം വരാനാവില്ല.</p>
+
+    <div class="section">
+      <h2>റിപ്പോർട്ടിലെ പ്രധാന പഠിപ്പുകൾ</h2>
+      <ul>
+        <li><strong>ട്രൈഗ്ലിസറൈഡുകൾ:</strong> ഹൃദ്രോഗ സാധ്യത വർദ്ധിപ്പിക്കുന്നു, 150 mg/dL ൽ താഴെയാകണം.</li>
+        <li><strong>LDL കൊളസ്‌ട്രോൾ:</strong> 'ചീത്ത കൊളസ്‌ട്രോൾ' ആണ്, കുറയ്ക്കേണ്ടതാണ്.</li>
+        <li><strong>HDL കൊളസ്‌ട്രോൾ:</strong> 'നല്ല കൊളസ്‌ട്രോൾ', വർദ്ധിപ്പിക്കുക.</li>
+        <li><strong>VLDL:</strong> ട്രൈഗ്ലിസറൈഡുകൾ ശരീരത്തിൽ വിതരണം ചെയ്യുന്നു, കുറച്ചിരിക്കുക.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>ഉച്ചഭക്ഷണ സമയക്രമം</h2>
+      <ul>
+        <li><strong>വേളെ രാവിലെ:</strong> തേങ്ങയില്ലാത്ത ചൂട് വെള്ളം/മേത്തി വിത്ത്</li>
+        <li><strong>പ്രഭാതഭക്ഷണം:</strong> ഓട്സ്, പഴങ്ങൾ, ചുവന്ന അരി ഇഡലി</li>
+        <li><strong>മധ്യകാലം:</strong> 1 പഴം</li>
+        <li><strong>ഉച്ചഭക്ഷണം:</strong> ചുവന്ന അരി, സാംബാർ, കറിവേറുകൾ, ഒലീവ് ഓയിൽ 1 tsp</li>
+        <li><strong>വൈകുന്നേരം:</strong> ബട്ടർമിൽക്ക് അല്ലെങ്കിൽ ഹരിത ചായ</li>
+        <li><strong>രാത്രി:</strong> മിക്കവാറും ഉച്ചഭക്ഷണം പോലെ</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>അറിയേണ്ട എണ്ണങ്ങൾ</h2>
+      <ul>
+        <li><strong>ഒലീവ് ഓയിൽ:</strong> MUFA ഉള്ളത്, LDL കുറയ്ക്കുന്നു</li>
+        <li><strong>കടല ഓയിൽ:</strong> നല്ലത്, MUFA ഉണ്ട്</li>
+        <li><strong>റൈസ് ബ്രാൻ ഓയിൽ:</strong> കൊളസ്‌ട്രോൾ കുറയ്ക്കുന്നു</li>
+        <li><strong>കടുക്
