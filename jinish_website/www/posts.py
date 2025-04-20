@@ -1,6 +1,9 @@
 import frappe
 
 def get_context(context):
+    # Disable caching to ensure fresh content
+    context.no_cache = 1
+    
     # Get all published blog posts
     context.blogs = frappe.get_all('Blog Post', 
                                   fields=['name', 'title', 'blog_intro', 'published', 'creation', 'modified', 'blogger', 'blog_category', 'route', 'meta_image'], 

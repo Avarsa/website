@@ -4,6 +4,9 @@ def get_context(context):
     # Get the blog post name from the query string
     blog_name = frappe.form_dict.get('name')
     
+    # Disable caching to ensure fresh content
+    context.no_cache = 1
+    
     if not blog_name:
         frappe.local.flags.redirect_location = '/posts'
         raise frappe.Redirect
