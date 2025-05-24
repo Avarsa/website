@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered CBSE Tutoring Platform - Business Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#06b6d4'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans leading-relaxed">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-4">EduMentor AI</h1>
+            <p class="text-xl text-blue-100">Revolutionizing CBSE Education Through Intelligent Tutoring</p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white/10 rounded-lg p-4">
+                    <h3 class="font-semibold">Target Market</h3>
+                    <p class="text-blue-100">20M+ CBSE Students</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-4">
+                    <h3 class="font-semibold">Market Size</h3>
+                    <p class="text-blue-100">₹17.34B by 2030</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-4">
+                    <h3 class="font-semibold">ROI Projection</h3>
+                    <p class="text-blue-100">7.5x in 3 years</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 py-12">
+        
+        <!-- Executive Summary -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Executive Summary</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Vision</h3>
+                        <p class="text-gray-700 mb-4">To become India's leading AI-powered personalized tutoring platform, specifically designed for CBSE curriculum alignment, making quality education accessible and affordable to millions of students.</p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Mission</h3>
+                        <p class="text-gray-700">Provide intelligent, curriculum-aligned tutoring that adapts to each student's learning pace, strengthens weak areas, and ensures mastery of CBSE concepts through advanced AI technology.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Key Differentiators</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>CBSE curriculum-specific content alignment</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>AI-driven personalized learning paths</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Affordable pricing (₹299/month vs ₹30,000+/year competitors)</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Real-time doubt resolution with photo upload</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Comprehensive parent progress tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Market Analysis & Opportunity</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">CBSE Market Size (Fact-Checked)</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Total CBSE Students (2024)</span>
+                            <span class="text-primary font-bold">20+ Million</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">CBSE Affiliated Schools</span>
+                            <span class="text-primary font-bold">24,000+</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Classes 9-12 Students</span>
+                            <span class="text-primary font-bold">~8 Million</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Tech-Enabled Households</span>
+                            <span class="text-primary font-bold">2.4 Million</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded border-2 border-green-200">
+                            <span class="font-medium">Addressable Market</span>
+                            <span class="text-green-600 font-bold">1.2 Million</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Indian EdTech Market Growth</h3>
+                    <div class="space-y-4">
+                        <div class="text-center p-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg">
+                            <p class="text-sm text-gray-600">Current Market Size (2024)</p>
+                            <p class="text-2xl font-bold text-primary">$5.13 Billion</p>
+                        </div>
+                        <div class="text-center p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg">
+                            <p class="text-sm text-gray-600">Projected Market Size (2030)</p>
+                            <p class="text-2xl font-bold text-green-600">$17.34 Billion</p>
+                        </div>
+                        <div class="text-center p-4 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
+                            <p class="text-sm text-gray-600">Annual Growth Rate (CAGR)</p>
+                            <p class="text-2xl font-bold text-purple-600">19%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4 text-primary">Competitive Analysis</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Platform</th>
+                                <th class="px-4 py-3 text-left font-semibold">Pricing</th>
+                                <th class="px-4 py-3 text-left font-semibold">Features</th>
+                                <th class="px-4 py-3 text-left font-semibold">Limitations</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Byju's</td>
+                                <td class="px-4 py-3 text-orange-600 font-semibold">₹30,000-₹75,000/year</td>
+                                <td class="px-4 py-3">Video lessons, Tests, Live classes</td>
+                                <td class="px-4 py-3 text-red-600">High cost, Limited personalization</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Vedantu</td>
+                                <td class="px-4 py-3 text-orange-600 font-semibold">₹20,000-₹50,000/year</td>
+                                <td class="px-4 py-3">Live tutoring, Group sessions</td>
+                                <td class="px-4 py-3 text-red-600">Scheduling constraints, High cost</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Doubtnut</td>
+                                <td class="px-4 py-3 text-blue-600 font-semibold">Freemium</td>
+                                <td class="px-4 py-3">Photo-based doubt solving</td>
+                                <td class="px-4 py-3 text-red-600">Limited curriculum coverage</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-3 font-bold text-green-700">EduMentor AI</td>
+                                <td class="px-4 py-3 text-green-600 font-bold">₹299/month (₹3,588/year)</td>
+                                <td class="px-4 py-3">AI tutoring, Personalized paths, CBSE-aligned</td>
+                                <td class="px-4 py-3 text-green-600">New brand (opportunity)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Moat Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Technology Architecture & Strategic Moat</h2>
+            
+            <!-- Strategic Positioning -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 mb-8 border-2 border-blue-200">
+                <h3 class="text-2xl font-bold text-primary mb-4">🏰 Building Unbreachable Moats: Not Fighting LLMs, But Owning the Context</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-blue-700">The Strategic Philosophy</h4>
+                        <p class="text-gray-700 mb-4">Instead of competing with OpenAI/Claude on raw intelligence, we're building defensible moats through:</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span><strong>Curriculum Specificity:</strong> Deep CBSE knowledge that generic LLMs lack</li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span><strong>Learning Data Moats:</strong> Student performance patterns unique to our platform</li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span><strong>Pedagogical Intelligence:</strong> How to teach, not just what to teach</li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span><strong>Ecosystem Lock-in:</strong> Parent-teacher-student triangle dependency</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-green-700">Defensible Assets We're Building</h4>
+                        <div class="space-y-3">
+                            <div class="p-3 bg-white rounded-lg border border-green-200">
+                                <h5 class="font-semibold text-green-800">Curated CBSE Content Library</h5>
+                                <p class="text-sm text-gray-600">Human-verified explanations, examples, and solutions</p>
+                            </div>
+                            <div class="p-3 bg-white rounded-lg border border-blue-200">
+                                <h5 class="font-semibold text-blue-800">Learning Behavior Database</h5>
+                                <p class="text-sm text-gray-600">Millions of student interactions and learning patterns</p>
+                            </div>
+                            <div class="p-3 bg-white rounded-lg border border-purple-200">
+                                <h5 class="font-semibold text-purple-800">Teacher-Approved Workflows</h5>
+                                <p class="text-sm text-gray-600">Pedagogy that actual educators have validated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Core Technology Stack</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Backend Framework</span>
+                            <span class="text-blue-600 font-semibold">Frappe</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Frontend</span>
+                            <span class="text-blue-600 font-semibold">React + Tailwind</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                            <span class="font-medium">AI Integration</span>
+                            <span class="text-blue-600 font-semibold">LangChain + Multi-LLM</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Vector Database</span>
+                            <span class="text-blue-600 font-semibold">Chroma/Qdrant</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Real-time Features</span>
+                            <span class="text-blue-600 font-semibold">WebSocket/Pusher</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">AI-Powered Features</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 border-l-4 border-primary bg-blue-50">
+                            <h4 class="font-semibold text-gray-800">Personalized Learning Engine</h4>
+                            <p class="text-sm text-gray-600">Adapts to individual learning patterns and pace</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-green-500 bg-green-50">
+                            <h4 class="font-semibold text-gray-800">Mastery-Based Progression</h4>
+                            <p class="text-sm text-gray-600">Ensures 80%+ understanding before advancing</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-purple-500 bg-purple-50">
+                            <h4 class="font-semibold text-gray-800">Doubt Resolution AI</h4>
+                            <p class="text-sm text-gray-600">Photo-based question solving with step-by-step explanations</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-orange-500 bg-orange-50">
+                            <h4 class="font-semibold text-gray-800">Spaced Repetition System</h4>
+                            <p class="text-sm text-gray-600">Scientifically-timed revision for optimal retention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Projections -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Financial Projections & Business Model</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Pricing Strategy</h3>
+                    <div class="space-y-4">
+                        <div class="border rounded-lg p-4 border-green-200 bg-green-50">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Monthly Plan</h4>
+                                    <p class="text-sm text-green-600">All subjects, AI tutor, progress tracking</p>
+                                </div>
+                                <div class="text-2xl font-bold text-green-600">₹299</div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-4 border-blue-200 bg-blue-50">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-semibold text-blue-800">Annual Plan</h4>
+                                    <p class="text-sm text-blue-600">2 months free + parent dashboard</p>
+                                </div>
+                                <div class="text-2xl font-bold text-blue-600">₹2,999</div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-4 border-purple-200 bg-purple-50">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-semibold text-purple-800">School B2B</h4>
+                                    <p class="text-sm text-purple-600">Bulk pricing for institutions</p>
+                                </div>
+                                <div class="text-2xl font-bold text-purple-600">₹200/student</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">User Acquisition (Realistic)</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                            <span class="font-medium">Year 1 (MVP Launch)</span>
+                            <span class="text-gray-700 font-bold">2,000 users</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Year 2 (Growth Phase)</span>
+                            <span class="text-blue-600 font-bold">10,000 users</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="font-medium">Year 3 (Scale Phase)</span>
+                            <span class="text-green-600 font-bold">25,000 users</span>
+                        </div>
+                        <div class="mt-4 p-3 bg-orange-50 rounded border border-orange-200">
+                            <p class="text-sm text-orange-800"><strong>Growth Strategy:</strong> School partnerships, digital marketing, referral programs, and vernacular language expansion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Cost Breakdown -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-6 text-primary">Detailed Cost Structure & Revenue Projections</h3>
+                
+                <!-- Year 1 Breakdown -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-4 text-blue-600">Year 1: MVP & Market Entry (₹59.4L Total Costs)</h4>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Technology Infrastructure (₹8.4L)</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>LLM API Costs (OpenAI/Claude)</span>
+                                    <span class="font-medium">₹4.8L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Frappe Cloud Hosting</span>
+                                    <span class="font-medium">₹1.2L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Media Storage & CDN</span>
+                                    <span class="font-medium">₹0.6L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Frontend Hosting (Vercel)</span>
+                                    <span class="font-medium">₹0.24L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Analytics & Monitoring Tools</span>
+                                    <span class="font-medium">₹0.36L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Security & Backup Services</span>
+                                    <span class="font-medium">₹0.6L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-blue-50 rounded">
+                                    <span>Development Tools & Licenses</span>
+                                    <span class="font-medium">₹0.6L</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Human Resources (₹29L)</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>Full-Stack Developer (1)</span>
+                                    <span class="font-medium">₹6L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>AI/ML Engineer (1)</span>
+                                    <span class="font-medium">₹10L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>Content Curator/Subject Expert (1)</span>
+                                    <span class="font-medium">₹4L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>UX/UI Designer (1)</span>
+                                    <span class="font-medium">₹6L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-green-50 rounded">
+                                    <span>Customer Support Executive (1)</span>
+                                    <span class="font-medium">₹3L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Marketing & Sales (₹17L)</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-purple-50 rounded">
+                                    <span>Google Ads & Facebook Ads</span>
+                                    <span class="font-medium">₹8L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-purple-50 rounded">
+                                    <span>Content Marketing & SEO</span>
+                                    <span class="font-medium">₹3L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-purple-50 rounded">
+                                    <span>School Outreach Programs</span>
+                                    <span class="font-medium">₹4L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-purple-50 rounded">
+                                    <span>Referral Incentives</span>
+                                    <span class="font-medium">₹2L</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Operations (₹5L)</h5>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Office Rent & Utilities</span>
+                                    <span class="font-medium">₹2L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Legal & Compliance</span>
+                                    <span class="font-medium">₹1L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Accounting & Tax Services</span>
+                                    <span class="font-medium">₹0.6L</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-orange-50 rounded">
+                                    <span>Insurance & Miscellaneous</span>
+                                    <span class="font-medium">₹1.4L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 & 3 Summary -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h4 class="font-semibold text-green-800 mb-2">Year 2: Growth (₹1Cr Total)</h4>
+                        <div class="text-sm space-y-1">
+                            <div class="flex justify-between">
+                                <span>Technology</span>
+                                <span class="font-medium">₹15L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Team (10 people)</span>
+                                <span class="font-medium">₹45L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Marketing</span>
+                                <span class="font-medium">₹30L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Operations</span>
+                                <span class="font-medium">₹10L</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                        <h4 class="font-semibold text-purple-800 mb-2">Year 3: Scale (₹1.5Cr Total)</h4>
+                        <div class="text-sm space-y-1">
+                            <div class="flex justify-between">
+                                <span>Technology</span>
+                                <span class="font-medium">₹25L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Team (17 people)</span>
+                                <span class="font-medium">₹65L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Marketing</span>
+                                <span class="font-medium">₹45L</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Operations</span>
+                                <span class="font-medium">₹15L</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Category</th>
+                                <th class="px-4 py-3 text-center font-semibold">Year 1</th>
+                                <th class="px-4 py-3 text-center font-semibold">Year 2</th>
+                                <th class="px-4 py-3 text-center font-semibold">Year 3</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-3 font-semibold text-green-700">Revenue</td>
+                                <td class="px-4 py-3 text-center font-bold text-green-600">₹59.8L</td>
+                                <td class="px-4 py-3 text-center font-bold text-green-600">₹2.99Cr</td>
+                                <td class="px-4 py-3 text-center font-bold text-green-600">₹7.47Cr</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Technology Infrastructure</td>
+                                <td class="px-4 py-3 text-center">₹8.4L</td>
+                                <td class="px-4 py-3 text-center">₹15L</td>
+                                <td class="px-4 py-3 text-center">₹25L</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Human Resources</td>
+                                <td class="px-4 py-3 text-center">₹29L</td>
+                                <td class="px-4 py-3 text-center">₹45L</td>
+                                <td class="px-4 py-3 text-center">₹65L</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Marketing & Sales</td>
+                                <td class="px-4 py-3 text-center">₹17L</td>
+                                <td class="px-4 py-3 text-center">₹30L</td>
+                                <td class="px-4 py-3 text-center">₹45L</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Operations</td>
+                                <td class="px-4 py-3 text-center">₹5L</td>
+                                <td class="px-4 py-3 text-center">₹10L</td>
+                                <td class="px-4 py-3 text-center">₹15L</td>
+                            </tr>
+                            <tr class="bg-red-50">
+                                <td class="px-4 py-3 font-semibold text-red-700">Total Expenses</td>
+                                <td class="px-4 py-3 text-center font-bold text-red-600">₹59.4L</td>
+                                <td class="px-4 py-3 text-center font-bold text-red-600">₹1Cr</td>
+                                <td class="px-4 py-3 text-center font-bold text-red-600">₹1.5Cr</td>
+                            </tr>
+                            <tr class="bg-blue-50">
+                                <td class="px-4 py-3 font-semibold text-blue-700">Net Profit</td>
+                                <td class="px-4 py-3 text-center font-bold text-blue-600">₹0.4L</td>
+                                <td class="px-4 py-3 text-center font-bold text-blue-600">₹1.99Cr</td>
+                                <td class="px-4 py-3 text-center font-bold text-blue-600">₹5.97Cr</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 font-semibold text-yellow-700">Profit Margin</td>
+                                <td class="px-4 py-3 text-center font-bold text-yellow-600">0.7%</td>
+                                <td class="px-4 py-3 text-center font-bold text-yellow-600">66.6%</td>
+                                <td class="px-4 py-3 text-center font-bold text-yellow-600">79.9%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Key Cost Insights -->
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h5 class="font-semibold text-blue-800 mb-2">Technology Scaling</h5>
+                        <p class="text-sm text-blue-700">LLM costs scale linearly with users but become more efficient with optimization and caching strategies.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h5 class="font-semibold text-green-800 mb-2">Team Growth</h5>
+                        <p class="text-sm text-green-700">Hiring follows revenue growth to maintain service quality and product development pace.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                        <h5 class="font-semibold text-purple-800 mb-2">Marketing Efficiency</h5>
+                        <p class="text-sm text-purple-700">CAC decreases as brand recognition grows and referral programs become more effective.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Requirements -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Investment Plan & Fund Utilization</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Investment Requirements</h3>
+                    <div class="text-center mb-6">
+                        <div class="text-4xl font-bold text-green-600 mb-2">₹1 Crore</div>
+                        <p class="text-gray-600">Total Investment Required</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded">
+                            <span class="font-medium">Product Development</span>
+                            <div class="text-right">
+                                <div class="font-bold text-blue-600">₹30L</div>
+                                <div class="text-xs text-gray-500">30%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded">
+                            <span class="font-medium">Marketing & User Acquisition</span>
+                            <div class="text-right">
+                                <div class="font-bold text-green-600">₹40L</div>
+                                <div class="text-xs text-gray-500">40%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-50 rounded">
+                            <span class="font-medium">Operational Expenses</span>
+                            <div class="text-right">
+                                <div class="font-bold text-purple-600">₹20L</div>
+                                <div class="text-xs text-gray-500">20%</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-orange-50 rounded">
+                            <span class="font-medium">Contingency Fund</span>
+                            <div class="text-right">
+                                <div class="font-bold text-orange-600">₹10L</div>
+                                <div class="text-xs text-gray-500">10%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Equity & Returns</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-3">Proposed Equity Structure</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                                <span>Founder(s)</span>
+                                <span class="font-bold text-blue-600">75%</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                                <span>Investor</span>
+                                <span class="font-bold text-green-600">25%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-3">Investment Valuation</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-2 bg-blue-50 rounded">
+                                <span>Pre-money Valuation</span>
+                                <span class="font-bold">₹3 Crore</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-green-50 rounded">
+                                <span>Post-money Valuation</span>
+                                <span class="font-bold">₹4 Crore</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-100 to-blue-100 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">Projected ROI (Year 3)</h4>
+                        <div class="text-2xl font-bold text-green-600">7.5x Return</div>
+                        <p class="text-sm text-gray-600 mt-1">Based on ₹30 Cr valuation projection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Costs (LLM API) -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">AI Technology Costs (Fact-Checked)</h2>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4 text-primary">LLM API Pricing Analysis</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-3">Current OpenAI Pricing (2024)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between items-center p-2 bg-blue-50 rounded">
+                                <span>GPT-4o Input</span>
+                                <span class="font-bold">$3/1M tokens</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-blue-50 rounded">
+                                <span>GPT-4o Output</span>
+                                <span class="font-bold">$10/1M tokens</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-green-50 rounded">
+                                <span>GPT-4o Mini Input</span>
+                                <span class="font-bold">$0.15/1M tokens</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-green-50 rounded">
+                                <span>GPT-4o Mini Output</span>
+                                <span class="font-bold">$0.60/1M tokens</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-3">Estimated Monthly Usage</h4>
+                        <div class="space-y-3">
+                            <div class="p-3 bg-gray-50 rounded">
+                                <div class="font-medium">Average interactions per user</div>
+                                <div class="text-sm text-gray-600">~100 AI conversations/month</div>
+                            </div>
+                            <div class="p-3 bg-gray-50 rounded">
+                                <div class="font-medium">Tokens per interaction</div>
+                                <div class="text-sm text-gray-600">~1,500 tokens (input + output)</div>
+                            </div>
+                            <div class="p-3 bg-blue-50 rounded">
+                                <div class="font-medium">Cost per user/month</div>
+                                <div class="text-lg font-bold text-blue-600">~₹12-15</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <h4 class="font-semibold text-yellow-800 mb-2">Cost Optimization Strategies</h4>
+                    <ul class="text-sm text-yellow-700 space-y-1">
+                        <li>• Use GPT-4o Mini for routine queries (60% cost reduction)</li>
+                        <li>• Implement intelligent caching for repeated content</li>
+                        <li>• Use open-source models (Llama 3.1) for specific tasks</li>
+                        <li>• Batch API processing for 50% discount on non-urgent requests</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Development Roadmap</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</div>
+                        <h3 class="text-xl font-semibold text-blue-600">Phase 1: MVP Development (Months 1-4)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Core Features</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• CBSE curriculum integration (Classes 9-10)</li>
+                                <li>• Basic AI chat tutor</li>
+                                <li>• User authentication & profiles</li>
+                                <li>• Progress tracking dashboard</li>
+                                <li>• Question bank with 1000+ problems</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Success Metrics</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• 100 beta users</li>
+                                <li>• 70%+ user satisfaction</li>
+                                <li>• 10+ minutes avg session time</li>
+                                <li>• Core functionality stable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-3">2</div>
+                        <h3 class="text-xl font-semibold text-green-600">Phase 2: Growth & Enhancement (Months 5-12)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Advanced Features</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• Photo-based doubt solving</li>
+                                <li>• Personalized learning paths</li>
+                                <li>• Parent progress reports</li>
+                                <li>• Spaced repetition system</li>
+                                <li>• All CBSE classes (9-12)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Growth Targets</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• 2,000 paying users</li>
+                                <li>• Break-even achieved</li>
+                                <li>• 5+ school partnerships</li>
+                                <li>• 4.5+ app store rating</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold mr-3">3</div>
+                        <h3 class="text-xl font-semibold text-purple-600">Phase 3: Scale & Expansion (Years 2-3)</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Platform Expansion</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• Voice-based AI tutoring</li>
+                                <li>• Regional language support</li>
+                                <li>• State board curriculum</li>
+                                <li>• Competitive exam prep (JEE/NEET)</li>
+                                <li>• Mobile apps (iOS/Android)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Scale Targets</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• 25,000+ active users</li>
+                                <li>• ₹6Cr+ annual revenue</li>
+                                <li>• 100+ school partnerships</li>
+                                <li>• Tier 2/3 city expansion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Analysis -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Risk Analysis & Mitigation</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-red-600">Potential Risks</h3>
+                    <div class="space-y-4">
+                        <div class="p-3 border-l-4 border-red-500 bg-red-50">
+                            <h4 class="font-semibold text-red-700">Market Competition</h4>
+                            <p class="text-sm text-red-600">Large players like Byju's with significant resources</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-orange-500 bg-orange-50">
+                            <h4 class="font-semibold text-orange-700">User Acquisition Cost</h4>
+                            <p class="text-sm text-orange-600">High CAC in competitive EdTech market</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-yellow-500 bg-yellow-50">
+                            <h4 class="font-semibold text-yellow-700">Technology Dependence</h4>
+                            <p class="text-sm text-yellow-600">Reliance on third-party AI APIs</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-gray-500 bg-gray-50">
+                            <h4 class="font-semibold text-gray-700">Regulatory Changes</h4>
+                            <p class="text-sm text-gray-600">Potential EdTech regulations or CBSE policy changes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-green-600">Mitigation Strategies</h3>
+                    <div class="space-y-4">
+                        <div class="p-3 border-l-4 border-green-500 bg-green-50">
+                            <h4 class="font-semibold text-green-700">Differentiation Focus</h4>
+                            <p class="text-sm text-green-600">CBSE-specific features and affordable pricing as key differentiators</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-blue-500 bg-blue-50">
+                            <h4 class="font-semibold text-blue-700">Organic Growth</h4>
+                            <p class="text-sm text-blue-600">Strong referral programs and school partnerships to reduce CAC</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-purple-500 bg-purple-50">
+                            <h4 class="font-semibold text-purple-700">Technology Diversification</h4>
+                            <p class="text-sm text-purple-600">Multi-provider AI strategy and open-source model integration</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-indigo-500 bg-indigo-50">
+                            <h4 class="font-semibold text-indigo-700">Compliance Focus</h4>
+                            <p class="text-sm text-indigo-600">Proactive regulatory compliance and industry best practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Go-to-Market Strategy -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-primary pb-2">Go-to-Market Strategy</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-600">Digital Marketing</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>SEO-optimized content for CBSE topics</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Social media campaigns targeting parents</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>YouTube channel with sample tutorials</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Google Ads for CBSE-related searches</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Influencer partnerships with educators</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-green-600">School Partnerships</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Pilot programs with select CBSE schools</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Teacher training workshops</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Bulk licensing for schools</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Parent-teacher conference presentations</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Educational institution referrals</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold mb-4 text-purple-600">Community Building</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Student referral incentive programs</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Parent WhatsApp groups engagement</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Free doubt-solving sessions</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>CBSE exam preparation webinars</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Student success story campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center bg-gradient-to-r from-primary to-secondary text-white py-16 rounded-xl">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Indian Education?</h2>
+            <p class="text-xl text-blue-100 mb-8">Join us in building the future of personalized learning for 20 million CBSE students</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-2xl font-bold">₹1 Crore</div>
+                    <div class="text-blue-100">Investment Required</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-2xl font-bold">7.5x ROI</div>
+                    <div class="text-blue-100">Projected Return</div>
+                </div>
+                <div class="bg-white/10 rounded-lg p-6">
+                    <div class="text-2xl font-bold">25% Equity</div>
+                    <div class="text-blue-100">For Investors</div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <p class="text-lg font-semibold">Contact us to discuss this opportunity</p>
+                <p class="text-blue-100 mt-2">Let's build the Khan Academy of India, powered by AI</p>
+            </div>
+        </section>
+
+        <!-- Appendix -->
+        <section class="mt-16 bg-gray-100 rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Sources & Verification</h2>
+            <div class="text-sm text-gray-600 space-y-2">
+                <p><strong>Market Data:</strong> CBSE official statistics, India Brand Equity Foundation, GlobalData EdTech reports</p>
+                <p><strong>Pricing Data:</strong> OpenAI official pricing (2024), competitor analysis from public sources</p>
+                <p><strong>Industry Trends:</strong> Inc42 EdTech reports, Statista market analysis, IBEF education sector data</p>
+                <p><strong>Technology Costs:</strong> Current LLM API pricing from OpenAI, Anthropic, and other providers</p>
+                <p><strong>Financial Modeling:</strong> Based on industry standards and comparable EdTech startups</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
