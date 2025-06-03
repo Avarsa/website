@@ -3,6 +3,8 @@
 {% block style %}
 {{ super() }}
 <!-- Additional CSS for this page -->
+<!-- Include Bootstrap JS for modal functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 /* Base styles with scientific theme */
 :root {
@@ -290,11 +292,9 @@ body {
                     <p>
                         I believe in systems that reduce complexity rather than add to it. My approach combines careful attention to fundamental principles with a practical focus on creating solutions that truly matter to their users. Lately, I've been exploring the space where automated intelligence meets human-centered design.
                     </p>
+    
                     <p>
-                        When I'm not writing code, I spend time exploring ideas in computational thinking, reading about systems design, and occasionally writing about my experiences building digital solutions.
-                    </p>
-                    <p>
-                        I've been fortunate to work with the <a href="https://frappe.io" class="text-decoration-none" style="color: var(--primary-color);">Frappe Framework</a> ecosystem and various open source projects that align with my values of simplicity, sustainability, and thoughtful design.
+                        I've been fortunate to work extensively with the <a href="https://frappe.io" class="text-decoration-none" style="color: var(--primary-color);">Frappe Framework</a>, an exceptionally powerful and flexible open source platform. I develop custom applications and enterprise solutions on this framework, with a focus on creating systems that embody simplicity, sustainability, and thoughtful design. My recent work includes creating and maintaining <a href="https://pdadaman.in" class="text-decoration-none" style="color: var(--primary-color);">pdadaman.in</a>, the official portal for the Planning & Development Authority of Daman, which streamlines urban planning and development processes.
                     </p>
                 </div>
             </div>
@@ -355,7 +355,57 @@ body {
         <p class="cta-description">
             I'm always interested in thoughtful conversations about digital systems, design approaches, and collaborative projects that emphasize meaning over mere technical complexity.
         </p>
-        <a href="mailto:jinish@outlook.com" class="cta-button">Say Hello</a>
+        <button class="cta-button" id="sayHelloBtn">Say Hello</button>
+        
+        <!-- Contact Form Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: var(--light-bg); border-radius: 8px; border: 1px solid rgba(10, 25, 47, 0.1);">
+                    <div class="modal-header" style="border-bottom: 1px solid rgba(10, 25, 47, 0.1);">
+                        <h5 class="modal-title" id="contactModalLabel" style="color: var(--primary-color);">Send a Message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% if frappe.form_dict.sent == '1' %}
+                            <div class="alert alert-success" role="alert" style="background-color: rgba(100, 255, 218, 0.2); color: var(--primary-color); border: 1px solid var(--accent-color); border-radius: 4px; padding: 1rem;">
+                                <h5 style="color: var(--primary-color);">Thank you for your message!</h5>
+                                <p>I'll get back to you as soon as possible.</p>
+                            </div>
+                        {% else %}
+                            <form id="contactForm" method="POST" action="/api/method/jinish_website.api.submit_contact_form">
+                                <input type="hidden" name="redirect_to" value="/jinish?sent=1#contact">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label" style="color: var(--primary-color); font-weight: 500;">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required 
+                                           style="border: 1px solid rgba(10, 25, 47, 0.2); padding: 0.75rem; border-radius: 4px;">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" style="color: var(--primary-color); font-weight: 500;">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required
+                                           style="border: 1px solid rgba(10, 25, 47, 0.2); padding: 0.75rem; border-radius: 4px;">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label" style="color: var(--primary-color); font-weight: 500;">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required
+                                           style="border: 1px solid rgba(10, 25, 47, 0.2); padding: 0.75rem; border-radius: 4px;">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label" style="color: var(--primary-color); font-weight: 500;">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" required
+                                              style="border: 1px solid rgba(10, 25, 47, 0.2); padding: 0.75rem; border-radius: 4px;"></textarea>
+                                </div>
+                                <div class="text-end">
+                                    <button type="submit" class="btn" 
+                                            style="background-color: var(--primary-color); color: var(--text-color); padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 500;">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -367,4 +417,18 @@ body {
 
 {% block footer %}
 {% include "jinish_website/www/templates/includes/footer.html" %}
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the modal
+        const contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+        
+        // Show modal when Say Hello button is clicked
+        document.getElementById('sayHelloBtn').addEventListener('click', function() {
+            contactModal.show();
+        });
+    });
+</script>
 {% endblock %}
