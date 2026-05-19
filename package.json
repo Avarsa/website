@@ -1,0 +1,9 @@
+{
+  "name": "jinish-website-build",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn --cwd frontend dev",
+    "build": "yarn --cwd frontend install --frozen-lockfile && yarn --cwd frontend build"
+  }
+}

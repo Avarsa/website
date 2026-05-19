@@ -1,0 +1,92 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Charity Finance Dashboard{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/charity_dashboard/styles.css" />
+{% endblock %}
+
+{% block page_content %}
+  <header class="topbar">
+    <h1>Charity Finance Dashboard</h1>
+    <p class="subtitle">Live status, predictions, and funding alerts</p>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h3>Bank Balance</h3>
+        <div class="metric" id="bank-balance">—</div>
+      </div>
+      <div class="card">
+        <h3>Upcoming Payables</h3>
+        <div class="metric" id="upcoming-payables">—</div>
+      </div>
+      <div class="card">
+        <h3>Monthly Burn (avg)</h3>
+        <div class="metric" id="monthly-burn">—</div>
+      </div>
+      <div class="card ok" id="runway-card">
+        <h3>Runway</h3>
+        <div class="metric" id="runway">—</div>
+        <small id="runway-detail"></small>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Restricted vs Unrestricted Funds</h2>
+      <div class="funds">
+        <div class="fund">
+          <h4>Restricted</h4>
+          <div class="metric" id="restricted-balance">—</div>
+          <small id="restricted-depletion"></small>
+        </div>
+        <div class="fund">
+          <h4>Unrestricted</h4>
+          <div class="metric" id="unrestricted-balance">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Upcoming Funds (Manual)</h2>
+      <form id="fund-form" class="form">
+        <input type="text" id="funder" placeholder="Funder / Source" required />
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+        <input type="date" id="expected_date" required />
+        <select id="fund_type">
+          <option value="restricted">Restricted</option>
+          <option value="unrestricted">Unrestricted</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Expected Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="funds-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Notifications</h2>
+      <ul id="notifications" class="notifications"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Data sources: Financial System (AP/expenses), Bank Balance API, Manual Upcoming Funds</span>
+  </footer>
+{% endblock %}
+
+{% block script %}
+  <script src="/charity_dashboard/app.js"></script>
+{% endblock %}
