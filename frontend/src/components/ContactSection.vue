@@ -8,8 +8,6 @@
 
       <div class="contact-section__actions">
         <a class="button button--primary" :href="`mailto:${siteConfig.email}`">{{ contactSection.cta }}</a>
-        <a :href="siteConfig.links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a :href="siteConfig.links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a v-if="siteConfig.links.resume" :href="siteConfig.links.resume" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
     </div>
