@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="contact-section" aria-labelledby="contact-heading">
     <div class="contact-section__inner reveal">
-      <p class="section-heading__eyebrow">{{ contactSection.eyebrow }}</p>
+      <p v-if="contactSection.eyebrow" class="section-heading__eyebrow">{{ contactSection.eyebrow }}</p>
       <h2 id="contact-heading">{{ contactSection.title }}</h2>
       <p class="contact-section__main">{{ contactSection.main }}</p>
       <p class="contact-section__support">{{ contactSection.support }}</p>

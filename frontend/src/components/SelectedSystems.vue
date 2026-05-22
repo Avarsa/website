@@ -33,13 +33,20 @@
             <dl class="system-panel__facts">
               <div v-for="fact in system.panel.facts" :key="`${system.title}-${fact.label}`">
                 <dt>{{ fact.label }}</dt>
-                <dd>{{ fact.value }}</dd>
+                <dd>
+                  <a
+                    v-if="fact.href"
+                    :href="fact.href"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{ fact.value }}
+                  </a>
+                  <template v-else>{{ fact.value }}</template>
+                </dd>
               </div>
             </dl>
 
-            <div class="system-panel__parts" aria-label="System parts">
-              <span v-for="part in system.panel.parts" :key="`${system.title}-${part}`">{{ part }}</span>
-            </div>
           </div>
         </div>
       </article>

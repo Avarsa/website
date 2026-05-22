@@ -4,11 +4,9 @@
     <main id="main">
       <Hero />
 
-      <section class="identity-strip reveal" aria-label="Work metadata">
-        <p>{{ identityStrip }}</p>
-      </section>
+      <LiveWork />
 
-      <section class="page-section build-section" aria-labelledby="build-heading">
+      <section id="approach" class="page-section build-section" aria-labelledby="build-heading">
         <SectionHeading
           id="build-heading"
           :eyebrow="buildSection.eyebrow"
@@ -37,10 +35,11 @@
 import ContactSection from '@/components/ContactSection.vue'
 import Footer from '@/components/Footer.vue'
 import Hero from '@/components/Hero.vue'
+import LiveWork from '@/components/LiveWork.vue'
 import Navigation from '@/components/Navigation.vue'
 import NotesPreview from '@/components/NotesPreview.vue'
 import SectionHeading from '@/components/SectionHeading.vue'
 import SelectedSystems from '@/components/SelectedSystems.vue'
 import WorkPrinciples from '@/components/WorkPrinciples.vue'
-import { buildSection, identityStrip } from '@/lib/site-content'
+import { buildSection } from '@/lib/site-content'
 </script>

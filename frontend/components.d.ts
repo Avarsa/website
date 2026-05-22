@@ -11,6 +11,7 @@ declare module 'vue' {
     ContactSection: typeof import('./src/components/ContactSection.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
+    LiveWork: typeof import('./src/components/LiveWork.vue')['default']
     Navigation: typeof import('./src/components/Navigation.vue')['default']
     NotesPreview: typeof import('./src/components/NotesPreview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

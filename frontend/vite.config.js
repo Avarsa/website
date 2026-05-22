@@ -19,21 +19,11 @@ export default defineConfig(({ mode }) => ({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  optimizeDeps: {
-    include: ['frappe-ui', 'feather-icons'],
-  },
   base: mode === 'production' ? '/assets/jinish_website/personal-site/' : '/',
   build: {
     outDir: '../jinish_website/public/personal-site',
     emptyOutDir: true,
     target: 'es2015',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'frappe-ui': ['frappe-ui'],
-        },
-      },
-    },
   },
   server: {
     port: 8080,
