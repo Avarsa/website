@@ -12,14 +12,15 @@ export const siteConfig = {
 export const seo = {
   title: 'Jinish Chandrababu — Software that survives contact with reality',
   description:
-    'Personal website of Jinish Chandrababu, a software developer building operational systems, Frappe and ERPNext applications, government workflow platforms, enterprise tools, and practical AI integrations.',
+    'Personal website of Jinish Chandrababu, building complex operational and domain software for public systems, enterprises, Frappe and ERPNext, and practical AI integrations.',
   keywords: [
     'Jinish Chandrababu',
+    'complex software systems',
+    'operational software',
+    'domain software',
     'Frappe developer',
     'ERPNext developer',
-    'custom software',
     'AI integrations',
-    'government workflow software',
     'enterprise software',
     'India software developer',
   ],
@@ -35,41 +36,42 @@ export const navigation = [
 export const hero = {
   line: 'Software that survives contact with reality.',
   subheading:
-    'I design and build operational systems for businesses, institutions, and workflows where the details matter — permissions, ledgers, approvals, integrations, rules, records, and the messy edge cases in between.',
-  support: 'Built quietly from India. Designed for work that cannot stay theoretical.',
+    'I build software for work that cannot be reduced to screens: drawings, stock, fees, records, rules, roles, documents, and the operational details that keep things moving.',
+  support:
+    'Built quietly from India. For domains where software becomes part of daily work, not a layer floating above it.',
   primaryCta: 'See selected systems',
   secondaryCta: 'Start a conversation',
-  visualLabels: ['rule', 'permit', 'ledger', 'inspection', 'workflow', 'record', 'AI', 'ERP'],
+  visualLabels: ['rule', 'record', 'ledger', 'evidence', 'workflow', 'decision', 'AI', 'ops'],
 }
 
 export const identityStrip =
-  'Custom systems / Frappe & ERPNext / AI integrations / Government workflows / Enterprise operations'
+  'Complex systems / Public platforms / Enterprise operations / Frappe & ERPNext / Practical AI'
 
 export const buildSection = {
   eyebrow: 'FIELD 01',
   title: 'The work I am drawn to',
   intro:
-    'I like problems where software has to understand the world around it — the people, the paperwork, the rules, the exceptions, the incentives, and the quiet pressure of daily operations.',
+    'I am drawn to software with real operational weight: many stakeholders, deep domain rules, messy data, and outcomes people depend on.',
   cards: [
     {
-      title: 'Operational software',
+      title: 'Systems that carry the work',
       body:
-        'Systems for teams that need more than a dashboard — approvals, records, payments, documents, audit trails, roles, permissions, and workflows that keep moving even when the process is complicated.',
-      label: 'Workflow-first',
-      meta: 'workflow / approvals / audit trails / roles',
+        'Core software where payments, stock, certificates, records, decisions, and accountability move because the system holds the process.',
+      label: 'The work happens here',
+      meta: 'records / money / roles / decisions',
     },
     {
-      title: 'Frappe & ERPNext systems',
+      title: 'Complex domain software',
       body:
-        'Custom applications, modules, reports, integrations, and business tools built on top of frameworks that are practical enough for real operations and flexible enough for unusual requirements.',
-      label: 'Business logic that fits',
-      meta: 'doctypes / reports / modules / integrations',
+        'Products for domains with their own rules: public bodies, regulated operations, enterprise teams, and new markets where the model matters.',
+      label: 'Domain first',
+      meta: 'rules / data models / evidence / reliability',
     },
     {
-      title: 'Useful AI integrations',
+      title: 'AI inside serious workflows',
       body:
-        'AI features that earn their place inside a workflow — assistants, document understanding, search, summaries, automations, and decision support that make existing systems sharper instead of noisier.',
-      label: 'AI without theatre',
+        'AI used where it saves attention and improves judgment: reading, search, summaries, drafting, review, and decisions with context.',
+      label: 'Useful, reviewable AI',
       meta: 'documents / search / summaries / review',
     },
   ],
@@ -78,131 +80,168 @@ export const buildSection = {
 export const selectedSystemsSection = {
   eyebrow: 'FIELD 02',
   title: 'Selected systems',
-  intro:
-    'A few examples of the kind of work I care about: software connected to rules, people, institutions, and consequences.',
+  intro: 'Examples of software that does not sit beside the work. It carries it.',
 }
 
 export const selectedSystems = [
   {
-    category: 'GOVERNMENT WORKFLOW / BUILDING PERMISSIONS',
+    category: 'PUBLIC SYSTEMS / RULE-HEAVY SOFTWARE',
     title: 'ArchVerity',
     description:
-      'A building scrutiny and permission system for urban local bodies, designed around drawings, rules, documents, inspections, and approval workflows.',
+      'A production building-plan scrutiny and permission system for PDA Daman: CAD/DXF reading, rule checks, document flows, payments, inspections, and certificate generation.',
     mattered: [
-      'Translating complex approval logic into a usable workflow',
-      'Handling technical documents, roles, records, and review stages',
-      'Designing for officials, applicants, and operational accountability',
-      'Keeping the system practical enough for real institutional use',
+      'Turning drawings and regulations into reviewable system evidence',
+      'Supporting applicants, officials, hierarchy, payments, and records',
+      'Keeping permissions, plinth certificates, and occupancy work traceable',
     ],
-    texture:
-      'A system where software meets drawings, regulations, field realities, and public-facing decisions.',
-    meta: 'drawings / approvals / documents / inspections',
-    visual: 'blueprint',
-    labels: ['setback', 'review', 'stamp', 'drawing'],
+    texture: 'A public system where drawing geometry, policy, money, and field reality meet.',
+    meta: 'CAD / rules / payments / certificates',
+    panel: {
+      eyebrow: 'Production notes',
+      facts: [
+        { label: 'Use', value: 'PDA Daman building permissions' },
+        { label: 'Engine', value: 'CAD/DXF extraction and rule scrutiny' },
+        { label: 'Outputs', value: 'reports, challans, certificates, records' },
+        { label: 'Live weight', value: '79 construction permissions, plinth and occupancy flows, INR 10 Cr+ collected' },
+      ],
+      parts: [
+        'drawing parser',
+        'rule checks',
+        'payment flow',
+        'site inspection',
+        'certificate PDFs',
+        'digital signing',
+      ],
+    },
   },
   {
-    category: 'REGULATED OPERATIONS / EXCISE WORKFLOWS',
+    category: 'REGULATED OPERATIONS / REVENUE AND MOVEMENT',
     title: 'EOLS',
     description:
-      'An excise operations and licensing system shaped around permits, movement, compliance, records, payments, and regulated supply-chain workflows.',
+      'A production excise operations and licensing system across Daman, Diu, Dadra & Nagar Haveli: permits, label registration, stock, ledgers, duties, fees, and regulated movement.',
     mattered: [
-      'Turning regulated movement into clear digital flows',
-      'Supporting roles, permissions, records, and operational checks',
-      'Designing around traceability, compliance, and day-to-day usability',
-      'Making complex processes legible without oversimplifying them',
+      'Keeping high-volume permit and movement flows reliable',
+      'Connecting businesses, officials, stock, payments, and compliance',
+      'Supporting regulated imports and operations where downtime has real cost',
     ],
-    texture: 'Not a dashboard sitting above the process — software living inside the process.',
-    meta: 'permits / movement / compliance / traceability',
-    visual: 'permit',
-    labels: ['permit', 'ledger', 'check', 'movement'],
+    texture: 'When this kind of system stops, the work outside the system stops too.',
+    meta: 'permits / stock / ledgers / revenue',
+    panel: {
+      eyebrow: 'Production notes',
+      facts: [
+        { label: 'Scale', value: '17,000+ permits issued by April 4, 2026' },
+        { label: 'Revenue', value: 'INR 32 Cr+ in duties, fees, and bottling charges' },
+        { label: 'Coverage', value: 'Daman, Diu, Dadra & Nagar Haveli' },
+        { label: 'Critical use', value: 'regulated imports, movement, stock, and business continuity' },
+      ],
+      parts: [
+        'label registration',
+        'stock ledgers',
+        'movement permits',
+        'import/export',
+        'bottling fees',
+        'compliance checks',
+      ],
+    },
   },
   {
-    category: 'BUSINESS SYSTEMS / ERP / CUSTOM APPLICATIONS',
+    category: 'BUSINESS SYSTEMS / OPERATING LAYERS',
     title: 'Enterprise operating tools',
     description:
-      'Custom Frappe and ERPNext systems for businesses that need their software to match how work actually happens — not how a generic template assumes it should happen.',
+      'Custom Frappe, ERPNext, and internal tools for teams whose real process is more specific than generic software allows.',
     mattered: [
-      'Custom doctypes, reports, workflows, and dashboards',
-      'Integrations with existing business processes',
-      'Role-based access and clean operational visibility',
-      'Reducing dependence on scattered spreadsheets and manual follow-ups',
+      'Turning scattered spreadsheets into shared operational records',
+      'Designing reports, workflows, and access around responsibility',
+      'Making business logic visible enough to change safely',
     ],
-    texture: 'The best internal software often disappears into the rhythm of the team using it.',
+    texture: "The best internal systems become part of the team's operating rhythm.",
     meta: 'ERP / records / reports / internal operations',
-    visual: 'erp',
-    labels: ['module', 'record', 'report', 'state'],
+    panel: {
+      eyebrow: 'Typical shape',
+      facts: [
+        { label: 'Model', value: 'custom doctypes, reports, states, and permissions' },
+        { label: 'Work', value: 'records replacing spreadsheets and follow-ups' },
+        { label: 'Users', value: 'teams with different roles and responsibilities' },
+      ],
+      parts: ['ERPNext', 'Frappe', 'reports', 'dashboards', 'access control', 'integrations'],
+    },
   },
   {
     category: 'AI / AUTOMATION / DECISION SUPPORT',
     title: 'AI inside workflows',
     description:
-      'Experiments and integrations using language models where they are genuinely useful: reading, summarizing, searching, assisting, explaining, and reducing repetitive cognitive work.',
+      'Language-model features inside existing systems: document understanding, search, summaries, drafting, review, and guided decisions.',
     mattered: [
-      'Keeping AI close to actual user tasks',
-      'Avoiding gimmicks and generic chatbot wrappers',
-      'Designing for human review, traceability, and context',
-      'Making systems feel more capable without making them less trustworthy',
+      'Putting AI near the actual task, not outside it',
+      'Keeping human review, source context, and traceability intact',
+      'Reducing cognitive load without reducing accountability',
     ],
-    texture: 'AI works best when it respects the workflow it is entering.',
+    texture: 'AI is most useful when it strengthens the system around it.',
     meta: 'documents / search / context / human review',
-    visual: 'ai',
-    labels: ['search', 'draft', 'review', 'context'],
+    panel: {
+      eyebrow: 'Use when it helps',
+      facts: [
+        { label: 'Input', value: 'documents, records, notes, conversations, search context' },
+        { label: 'Output', value: 'summaries, drafts, explanations, comparisons, review support' },
+        { label: 'Constraint', value: 'human review and traceability stay in the loop' },
+      ],
+      parts: ['document reading', 'semantic search', 'summaries', 'drafting', 'review', 'context'],
+    },
   },
 ]
 
 export const principlesSection = {
   eyebrow: 'FIELD 03',
   title: 'Working principles',
-  intro: 'The same beliefs show up again and again in the systems I like building.',
+  intro: 'The same beliefs keep showing up in systems that matter.',
 }
 
 export const principles = [
   {
-    title: 'Reality is the hardest stakeholder',
+    title: 'The domain comes before the screen',
     body:
-      'Requirements are rarely just written down. They hide inside habits, exceptions, paperwork, incentives, legacy systems, and the way people actually get through the day.',
+      'Good software starts by learning how the work actually survives: rules, incentives, constraints, exceptions, and failure modes.',
   },
   {
-    title: 'Rules are part of the interface',
+    title: 'Reliability is product value',
     body:
-      'In serious software, rules cannot stay buried in code or policy documents. They need to become visible, understandable, testable, and usable.',
+      'When a system carries real work, uptime, traceability, and recovery paths matter as much as features.',
   },
   {
-    title: 'Quiet software is underrated',
+    title: 'Rules need operational form',
     body:
-      'The best systems do not constantly announce themselves. They reduce friction, preserve context, and let people move through complicated work with less confusion.',
+      'Rules should become visible, testable, explainable parts of the system. Hidden rules create hidden risk.',
   },
   {
-    title: 'AI should earn its place',
+    title: 'AI should strengthen judgment',
     body:
-      'AI is useful when it improves a real workflow. It should help people read, decide, search, draft, compare, and understand — not decorate a product with noise.',
+      'AI is useful when it helps people read, compare, decide, review, and act with more context.',
   },
 ]
 
 export const notesSection = {
   eyebrow: 'FIELD 04',
   title: 'Field notes',
-  intro:
-    'Fragments from building, debugging, observing, and occasionally stepping away from the screen long enough to notice the pattern.',
+  intro: 'Short notes from building systems that meet paperwork, pressure, users, and time.',
 }
 
 export const fieldNotes = [
   {
     title: 'Reality breaks beautiful diagrams',
     excerpt:
-      'Every serious system starts as a clean flowchart and eventually meets a locked office, a missing document, a power cut, a policy exception, or a user who knows the process better than the software does.',
+      'The useful map is not the clean flowchart. It is the version that includes missing files, bad inputs, hierarchy, exceptions, downtime, and the person who still has to finish the work.',
     tag: 'Systems',
   },
   {
     title: 'The problem with dashboards',
     excerpt:
-      'Dashboards are easy to admire and hard to live inside. Most teams do not need more charts first. They need the underlying work to become clearer, calmer, and harder to lose.',
+      'Dashboards are easy to admire. The harder work is making the underlying operation clearer, safer, and harder to lose.',
     tag: 'Operations',
   },
   {
     title: 'Rhythm, debugging, and a clean shot',
     excerpt:
-      'Music, tennis, and software all punish force. The better answer is usually timing, attention, repetition, and knowing when not to interfere.',
+      'Music, tennis, and software all punish force. Better answers usually come from timing, attention, repetition, and restraint.',
     tag: 'Personal',
   },
 ]
@@ -211,11 +250,11 @@ export const personalLine = 'Rhythm matters — in systems, songs, and serves.'
 
 export const contactSection = {
   eyebrow: 'FIELD 05',
-  title: 'Start with the workflow',
+  title: 'Start with the system',
   main:
-    'The conversations I enjoy most usually begin with a messy process: a spreadsheet that has outgrown itself, an approval flow nobody fully trusts, an ERP that almost fits, a team doing too much by hand, or an AI idea that needs to become genuinely useful.',
+    'The useful conversation usually starts with work that has become too important for spreadsheets, too specific for generic software, or too fragile to keep running by force.',
   support:
-    'I am especially interested in practical software for institutions, businesses, regulated workflows, internal tools, ERP systems, and AI-assisted operations.',
+    'I am interested in complex products and operating systems for public institutions, businesses, regulated domains, internal platforms, technical markets, and AI-assisted operations.',
   cta: 'Write to me',
 }
 

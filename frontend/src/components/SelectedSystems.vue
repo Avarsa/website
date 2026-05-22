@@ -25,17 +25,22 @@
           <p class="metadata-row">{{ system.meta }}</p>
         </div>
 
-        <div class="system-sketch" :class="`system-sketch--${system.visual}`" aria-hidden="true">
-          <div class="system-sketch__grid"></div>
-          <div class="system-sketch__document system-sketch__document--one"></div>
-          <div class="system-sketch__document system-sketch__document--two"></div>
-          <span v-for="label in system.labels" :key="label" class="system-sketch__label">{{ label }}</span>
-          <span class="system-sketch__node system-sketch__node--one"></span>
-          <span class="system-sketch__node system-sketch__node--two"></span>
-          <span class="system-sketch__node system-sketch__node--three"></span>
-          <span class="system-sketch__line system-sketch__line--one"></span>
-          <span class="system-sketch__line system-sketch__line--two"></span>
-          <span class="system-sketch__line system-sketch__line--three"></span>
+        <div class="system-panel" aria-label="System notes">
+          <div class="system-panel__grid" aria-hidden="true"></div>
+          <div class="system-panel__inner">
+            <p class="system-panel__eyebrow">{{ system.panel.eyebrow }}</p>
+
+            <dl class="system-panel__facts">
+              <div v-for="fact in system.panel.facts" :key="`${system.title}-${fact.label}`">
+                <dt>{{ fact.label }}</dt>
+                <dd>{{ fact.value }}</dd>
+              </div>
+            </dl>
+
+            <div class="system-panel__parts" aria-label="System parts">
+              <span v-for="part in system.panel.parts" :key="`${system.title}-${part}`">{{ part }}</span>
+            </div>
+          </div>
         </div>
       </article>
     </div>
