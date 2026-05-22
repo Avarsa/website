@@ -12,12 +12,15 @@ export const siteConfig = {
 export const seo = {
   title: 'Jinish Chandrababu — Software that survives contact with reality',
   description:
-    'Personal website of Jinish Chandrababu, building complex operational and domain software for public systems, enterprises, Frappe and ERPNext, and practical AI integrations.',
+    'Personal website of Jinish Chandrababu, building complex software for real-world domains, operational systems, enterprise tools, public-sector systems, and practical AI integrations.',
   keywords: [
     'Jinish Chandrababu',
+    'real-world software systems',
     'complex software systems',
     'operational software',
     'domain software',
+    'industrial software',
+    'workflow software',
     'Frappe developer',
     'ERPNext developer',
     'AI integrations',
@@ -36,66 +39,67 @@ export const navigation = [
 export const hero = {
   line: 'Software that survives contact with reality.',
   subheading:
-    'I build software for work that cannot be reduced to screens: drawings, stock, fees, records, rules, roles, documents, and the operational details that keep things moving.',
+    'I build software for work where screens are only the surface: learning the domain, modelling its objects and rules, and turning records, workflows, integrations, documents, and human judgment into systems people can rely on.',
   support:
-    'The work matters most when software becomes part of daily operations, not a layer floating above them.',
+    'The work matters most when unfamiliar details become clear enough for software to carry them safely.',
   primaryCta: 'Read the system notes',
   secondaryCta: 'Write to me',
-  visualLabels: ['rule', 'record', 'ledger', 'evidence', 'workflow', 'decision', 'AI', 'ops'],
+  visualLabels: ['domain', 'record', 'workflow', 'rule', 'integration', 'review', 'AI', 'ops'],
 }
 
 export const identityStrip =
-  'drawings / permits / ledgers / records / reports / AI when useful'
+  'learn the domain / model the rules / ship the system / improve the process'
 
 export const buildSection = {
-  eyebrow: 'FIELD 01',
-  title: 'A way of working',
+  eyebrow: 'Approach',
+  title: 'A way of building',
   intro:
-    'The work usually starts before code: understanding the object, the people around it, and the parts that should not stay trapped in memory or spreadsheets.',
+    'I usually begin by learning the domain closely: its vocabulary, objects, rules, exceptions, users, and pressure points. Then I turn that learning into software that can carry real work.',
   cards: [
     {
-      title: 'Look for the real object',
+      title: 'Learn the unfamiliar parts',
       body:
-        'A drawing, permit, stock entry, duty calculation, certificate, case file, report, or conversation usually has a shape the software needs to respect.',
-      label: 'Before screens',
-      meta: 'observe / model / simplify carefully',
-    },
-    {
-      title: "Move complexity out of people's heads",
-      body:
-        'Rules, roles, audit trails, payments, retries, and edge cases should live in the system, not in a fragile chain of reminders.',
-      label: 'Less theatre, more plumbing',
-      meta: 'rules / roles / records / recovery',
-    },
-    {
-      title: 'Build so the domain can grow',
-      body:
-        'The aim is not to trap work inside a template. It is to model the domain clearly enough that new rules, users, and possibilities can be added without starting over.',
+        'Architecture meant CAD drawings, development-control rules, margins, built-up area, FSI, scrutiny reports, and certificates. Excise meant duties, label registrations, stock movement, import, export, and compliance flows.',
       label: 'Domain first',
-      meta: 'public systems / industry / AI / new markets',
+      meta: 'learn / observe / ask better questions',
+    },
+    {
+      title: 'Turn learning into structure',
+      body:
+        'Once the domain becomes clear, it has to become models, states, validations, calculations, permissions, documents, audit trails, and recovery paths that other people can trust.',
+      label: 'From understanding to system',
+      meta: 'models / states / checks / documents',
+    },
+    {
+      title: 'Improve after the system starts breathing',
+      body:
+        'A working system reveals what was invisible before: bottlenecks, repeated mistakes, unclear ownership, unnecessary follow-ups, and places where automation or AI can actually help.',
+      label: 'Better process, later',
+      meta: 'observe / refine / automate carefully',
     },
   ],
 }
 
 export const selectedSystemsSection = {
-  eyebrow: 'FIELD 02',
-  title: 'Some systems I have lived with',
+  eyebrow: 'Production systems',
+  title: 'Systems that had to work',
   intro:
-    'Not a portfolio reel. A few systems that shaped how I think about software: the model, the people, the records, and the cost of making vague things explicit.',
+    'These are not the boundary of what I want to build. They are examples of entering complex domains, learning them deeply enough to model them, and shipping software people depend on.',
 }
 
 export const selectedSystems = [
   {
-    category: 'PUBLIC SYSTEMS / RULE-HEAVY SOFTWARE',
+    category: 'PRODUCTION SYSTEM / BUILDING PLAN SCRUTINY',
     title: 'ArchVerity',
     description:
       'A production building-plan scrutiny and permission system for PDA Daman: CAD/DXF reading, rule checks, document flows, payments, inspections, and certificate generation.',
     mattered: [
+      'Learning how drawings, GDR rules, margins, built-up area, FSI, and scrutiny logic behave in practice',
       'Turning drawings and regulations into reviewable system evidence',
       'Supporting applicants, officials, hierarchy, payments, and records',
       'Keeping permissions, plinth certificates, and occupancy work traceable',
     ],
-    texture: 'A public system where drawing geometry, policy, money, and field reality meet.',
+    texture: 'A domain model for drawings, regulations, reviews, payments, inspections, and final records.',
     meta: 'CAD / rules / payments / certificates',
     panel: {
       eyebrow: 'Production notes',
@@ -116,17 +120,18 @@ export const selectedSystems = [
     },
   },
   {
-    category: 'REGULATED OPERATIONS / REVENUE AND MOVEMENT',
+    category: 'PRODUCTION SYSTEM / REGULATED MOVEMENT',
     title: 'EOLS',
     description:
       'A production excise operations and licensing system across Daman, Diu, Dadra & Nagar Haveli: permits, label registration, stock, ledgers, duties, fees, and regulated movement.',
     mattered: [
+      'Learning duties, label registration, stock movement, import, export, and compliance flows',
       'Keeping high-volume permit and movement flows reliable',
       'Connecting businesses, officials, stock, payments, and compliance',
       'Supporting regulated imports and operations where downtime has real cost',
     ],
     texture: 'When this kind of system stops, the work outside the system stops too.',
-    meta: 'permits / stock / ledgers / revenue',
+    meta: 'permits / stock / ledgers / continuity',
     panel: {
       eyebrow: 'Production notes',
       facts: [
@@ -146,7 +151,7 @@ export const selectedSystems = [
     },
   },
   {
-    category: 'BUSINESS SYSTEMS / OPERATING LAYERS',
+    category: 'DOMAIN SOFTWARE / OPERATING LAYERS',
     title: 'Enterprise operating tools',
     description:
       'Custom Frappe, ERPNext, and internal tools for teams whose real process is more specific than generic software allows.',
@@ -192,16 +197,16 @@ export const selectedSystems = [
 ]
 
 export const principlesSection = {
-  eyebrow: 'FIELD 03',
+  eyebrow: 'Working notes',
   title: 'Notes I keep returning to',
   intro: 'Not rules for everyone. Just lessons that keep surviving real projects.',
 }
 
 export const principles = [
   {
-    title: 'The domain comes before the screen',
+    title: 'The domain comes before the interface',
     body:
-      'Good software starts by learning how the work actually survives: rules, incentives, constraints, exceptions, and failure modes.',
+      'Good software starts by learning how the work actually survives: vocabulary, objects, rules, incentives, constraints, exceptions, and failure modes.',
   },
   {
     title: 'Reliability is product value',
@@ -209,19 +214,19 @@ export const principles = [
       'When a system carries real work, uptime, traceability, and recovery paths matter as much as features.',
   },
   {
-    title: 'Rules need operational form',
+    title: 'Operational truth beats presentation',
     body:
-      'Rules should become visible, testable, explainable parts of the system. Hidden rules create hidden risk.',
+      'Dashboards matter less than the underlying state being correct, traceable, recoverable, and usable by the people doing the work.',
   },
   {
-    title: 'AI should strengthen judgment',
+    title: 'Learning has to become structure',
     body:
-      'AI is useful when it helps people read, compare, decide, review, and act with more context.',
+      'It is not enough for the builder to understand the domain. The understanding has to become usable structure inside the system.',
   },
 ]
 
 export const notesSection = {
-  eyebrow: 'FIELD 04',
+  eyebrow: 'Field notes',
   title: 'Field notes',
   intro: 'Small observations from building, debugging, watching people work, and stepping away long enough to see a pattern.',
 }
@@ -250,12 +255,12 @@ export const fieldNotes = [
 export const personalLine = 'Rhythm matters — in systems, songs, and serves.'
 
 export const contactSection = {
-  eyebrow: 'FIELD 05',
-  title: 'If the problem has weight',
+  eyebrow: 'Contact',
+  title: 'If the system has to carry real work',
   main:
-    'Write if you are working on something that cannot be handled by a generic app: a domain to understand, records to trust, people with different responsibilities, messy data, operational pressure, or a product idea that needs a real system under it.',
+    'Write if you are building around a domain that generic software cannot understand: physical operations, records to trust, people with different responsibilities, messy data, operational pressure, or a product idea that needs someone willing to learn the domain properly.',
   support:
-    'I am most interested in substantial software, early product systems, public or regulated operations, internal platforms, and useful AI inside real work.',
+    'I am most interested in substantial software, early product systems, public or regulated operations, industrial workflows, internal platforms, and useful AI inside real work.',
   cta: 'Write to me',
 }
 
