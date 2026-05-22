@@ -8,13 +8,12 @@
     />
 
     <div class="notes-grid">
-      <a v-for="note in fieldNotes" :key="note.title" class="note-card reveal" href="#contact">
+      <article v-for="note in fieldNotes" :key="note.title" class="note-card reveal">
         <span class="note-card__tag">{{ note.tag }}</span>
         <h3>{{ note.title }}</h3>
         <p>{{ note.excerpt }}</p>
-        <span class="note-card__soon">Coming soon</span>
-        <span class="note-card__scribble">filed for later reading</span>
-      </a>
+        <span class="note-card__soon">not yet published</span>
+      </article>
     </div>
 
     <p class="personal-line reveal">{{ personalLine }}</p>

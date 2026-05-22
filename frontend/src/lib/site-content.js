@@ -38,49 +38,50 @@ export const hero = {
   subheading:
     'I build software for work that cannot be reduced to screens: drawings, stock, fees, records, rules, roles, documents, and the operational details that keep things moving.',
   support:
-    'Built quietly from India. For domains where software becomes part of daily work, not a layer floating above it.',
-  primaryCta: 'See selected systems',
-  secondaryCta: 'Start a conversation',
+    'The work matters most when software becomes part of daily operations, not a layer floating above them.',
+  primaryCta: 'Read the system notes',
+  secondaryCta: 'Write to me',
   visualLabels: ['rule', 'record', 'ledger', 'evidence', 'workflow', 'decision', 'AI', 'ops'],
 }
 
 export const identityStrip =
-  'Complex systems / Public platforms / Enterprise operations / Frappe & ERPNext / Practical AI'
+  'drawings / permits / ledgers / records / reports / AI when useful'
 
 export const buildSection = {
   eyebrow: 'FIELD 01',
-  title: 'The work I am drawn to',
+  title: 'A way of working',
   intro:
-    'I am drawn to software with real operational weight: many stakeholders, deep domain rules, messy data, and outcomes people depend on.',
+    'The work usually starts before code: understanding the object, the people around it, and the parts that should not stay trapped in memory or spreadsheets.',
   cards: [
     {
-      title: 'Systems that carry the work',
+      title: 'Look for the real object',
       body:
-        'Core software where payments, stock, certificates, records, decisions, and accountability move because the system holds the process.',
-      label: 'The work happens here',
-      meta: 'records / money / roles / decisions',
+        'A drawing, permit, stock entry, duty calculation, certificate, case file, report, or conversation usually has a shape the software needs to respect.',
+      label: 'Before screens',
+      meta: 'observe / model / simplify carefully',
     },
     {
-      title: 'Complex domain software',
+      title: "Move complexity out of people's heads",
       body:
-        'Products for domains with their own rules: public bodies, regulated operations, enterprise teams, and new markets where the model matters.',
+        'Rules, roles, audit trails, payments, retries, and edge cases should live in the system, not in a fragile chain of reminders.',
+      label: 'Less theatre, more plumbing',
+      meta: 'rules / roles / records / recovery',
+    },
+    {
+      title: 'Build so the domain can grow',
+      body:
+        'The aim is not to trap work inside a template. It is to model the domain clearly enough that new rules, users, and possibilities can be added without starting over.',
       label: 'Domain first',
-      meta: 'rules / data models / evidence / reliability',
-    },
-    {
-      title: 'AI inside serious workflows',
-      body:
-        'AI used where it saves attention and improves judgment: reading, search, summaries, drafting, review, and decisions with context.',
-      label: 'Useful, reviewable AI',
-      meta: 'documents / search / summaries / review',
+      meta: 'public systems / industry / AI / new markets',
     },
   ],
 }
 
 export const selectedSystemsSection = {
   eyebrow: 'FIELD 02',
-  title: 'Selected systems',
-  intro: 'Examples of software that does not sit beside the work. It carries it.',
+  title: 'Some systems I have lived with',
+  intro:
+    'Not a portfolio reel. A few systems that shaped how I think about software: the model, the people, the records, and the cost of making vague things explicit.',
 }
 
 export const selectedSystems = [
@@ -102,7 +103,7 @@ export const selectedSystems = [
         { label: 'Use', value: 'PDA Daman building permissions' },
         { label: 'Engine', value: 'CAD/DXF extraction and rule scrutiny' },
         { label: 'Outputs', value: 'reports, challans, certificates, records' },
-        { label: 'Live weight', value: '79 construction permissions, plinth and occupancy flows, INR 10 Cr+ collected' },
+        { label: 'Live weight', value: '80+ construction permissions, plinth and occupancy flows, INR 10 Cr+ collected' },
       ],
       parts: [
         'drawing parser',
@@ -129,8 +130,8 @@ export const selectedSystems = [
     panel: {
       eyebrow: 'Production notes',
       facts: [
-        { label: 'Scale', value: '17,000+ permits issued by April 4, 2026' },
-        { label: 'Revenue', value: 'INR 32 Cr+ in duties, fees, and bottling charges' },
+        { label: 'Scale', value: '18,000+ permits issued' },
+        { label: 'Revenue', value: 'INR 33 Cr+ in duties, fees, and bottling charges' },
         { label: 'Coverage', value: 'Daman, Diu, Dadra & Nagar Haveli' },
         { label: 'Critical use', value: 'regulated imports, movement, stock, and business continuity' },
       ],
@@ -192,8 +193,8 @@ export const selectedSystems = [
 
 export const principlesSection = {
   eyebrow: 'FIELD 03',
-  title: 'Working principles',
-  intro: 'The same beliefs keep showing up in systems that matter.',
+  title: 'Notes I keep returning to',
+  intro: 'Not rules for everyone. Just lessons that keep surviving real projects.',
 }
 
 export const principles = [
@@ -222,7 +223,7 @@ export const principles = [
 export const notesSection = {
   eyebrow: 'FIELD 04',
   title: 'Field notes',
-  intro: 'Short notes from building systems that meet paperwork, pressure, users, and time.',
+  intro: 'Small observations from building, debugging, watching people work, and stepping away long enough to see a pattern.',
 }
 
 export const fieldNotes = [
@@ -250,11 +251,11 @@ export const personalLine = 'Rhythm matters — in systems, songs, and serves.'
 
 export const contactSection = {
   eyebrow: 'FIELD 05',
-  title: 'Start with the system',
+  title: 'If the problem has weight',
   main:
-    'The useful conversation usually starts with work that has become too important for spreadsheets, too specific for generic software, or too fragile to keep running by force.',
+    'Write if you are working on something that cannot be handled by a generic app: a domain to understand, records to trust, people with different responsibilities, messy data, operational pressure, or a product idea that needs a real system under it.',
   support:
-    'I am interested in complex products and operating systems for public institutions, businesses, regulated domains, internal platforms, technical markets, and AI-assisted operations.',
+    'I am most interested in substantial software, early product systems, public or regulated operations, internal platforms, and useful AI inside real work.',
   cta: 'Write to me',
 }
 

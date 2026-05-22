@@ -15,12 +15,11 @@
           :title="buildSection.title"
           :intro="buildSection.intro"
         />
-        <div class="build-grid">
-          <article v-for="card in buildSection.cards" :key="card.title" class="build-card reveal">
-            <p class="metadata-row">{{ card.meta }}</p>
+        <div class="work-note reveal">
+          <article v-for="card in buildSection.cards" :key="card.title" class="work-note__item">
+            <span>{{ card.label }}</span>
             <h3>{{ card.title }}</h3>
             <p>{{ card.body }}</p>
-            <span>{{ card.label }}</span>
           </article>
         </div>
       </section>

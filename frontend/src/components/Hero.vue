@@ -1,7 +1,6 @@
 <template>
   <section id="top" class="hero-section" aria-labelledby="hero-title">
     <div class="hero-section__copy reveal">
-      <p class="hero-section__kicker">Complex software / India / Systems with consequences</p>
       <h1 id="hero-title">{{ hero.line }}</h1>
       <p class="hero-section__subheading">{{ hero.subheading }}</p>
       <p class="hero-section__support">{{ hero.support }}</p>
