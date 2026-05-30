@@ -13,11 +13,8 @@ declare module 'vue' {
     Hero: typeof import('./src/components/Hero.vue')['default']
     LiveWork: typeof import('./src/components/LiveWork.vue')['default']
     Navigation: typeof import('./src/components/Navigation.vue')['default']
-    NotesPreview: typeof import('./src/components/NotesPreview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionHeading: typeof import('./src/components/SectionHeading.vue')['default']
-    SelectedSystems: typeof import('./src/components/SelectedSystems.vue')['default']
-    WorkPrinciples: typeof import('./src/components/WorkPrinciples.vue')['default']
   }
 }

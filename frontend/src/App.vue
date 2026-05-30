@@ -22,9 +22,6 @@
         </div>
       </section>
 
-      <SelectedSystems />
-      <WorkPrinciples />
-      <NotesPreview />
       <ContactSection />
     </main>
     <Footer />
@@ -37,9 +34,6 @@ import Footer from '@/components/Footer.vue'
 import Hero from '@/components/Hero.vue'
 import LiveWork from '@/components/LiveWork.vue'
 import Navigation from '@/components/Navigation.vue'
-import NotesPreview from '@/components/NotesPreview.vue'
 import SectionHeading from '@/components/SectionHeading.vue'
-import SelectedSystems from '@/components/SelectedSystems.vue'
-import WorkPrinciples from '@/components/WorkPrinciples.vue'
 import { buildSection } from '@/lib/site-content'
 </script>

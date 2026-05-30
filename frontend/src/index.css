@@ -28,8 +28,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: Geist, Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 17px;
-  line-height: 1.68;
+  font-size: 16px;
+  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -91,12 +91,12 @@ button:focus-visible {
 .site-nav-shell,
 main,
 .site-footer {
-  width: min(100% - 2rem, 780px);
+  width: min(100% - 2rem, 700px);
   margin-inline: auto;
 }
 
 .site-nav-shell {
-  padding: clamp(1.6rem, 5vw, 3.2rem) 0 1.4rem;
+  padding: clamp(1.2rem, 4vw, 2.4rem) 0 1rem;
 }
 
 .site-nav {
@@ -151,14 +151,14 @@ main,
 }
 
 .hero-section {
-  padding: clamp(1.8rem, 5vw, 3.5rem) 0 clamp(1.4rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 4vw, 2.2rem) 0 clamp(1.2rem, 3vw, 1.8rem);
 }
 
 .hero-section h1 {
   max-width: 720px;
   margin: 0;
   font-family: Newsreader, Iowan Old Style, Georgia, serif;
-  font-size: clamp(2.35rem, 5.2vw, 3.65rem);
+  font-size: clamp(2.15rem, 5vw, 3.2rem);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -166,15 +166,15 @@ main,
 
 .hero-section__subheading {
   max-width: 720px;
-  margin: 1.35rem 0 0;
+  margin: 1rem 0 0;
   color: var(--ink);
-  font-size: clamp(1.05rem, 2vw, 1.22rem);
-  line-height: 1.72;
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  line-height: 1.55;
 }
 
 .hero-section__support {
   max-width: 680px;
-  margin: 0.8rem 0 0;
+  margin: 0.65rem 0 0;
   color: var(--muted);
 }
 
@@ -182,8 +182,8 @@ main,
 .contact-section__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-top: 1.25rem;
+  gap: 0.85rem;
+  margin-top: 1rem;
 }
 
 .button {
@@ -202,23 +202,19 @@ main,
 }
 
 .page-section {
-  padding: clamp(2.3rem, 5vw, 3.7rem) 0;
+  padding: clamp(1.75rem, 4vw, 2.6rem) 0;
   border-top: 1px solid var(--line);
 }
 
 .hero-section + .page-section {
-  padding-top: clamp(1.6rem, 3vw, 2.2rem);
+  padding-top: clamp(1.45rem, 3vw, 2rem);
 }
 
 .section-heading {
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
 }
 
-.section-heading__eyebrow,
-.system-card__category,
-.note-card__tag,
-.metadata-row,
-.system-panel__eyebrow {
+.section-heading__eyebrow {
   margin: 0;
   color: var(--accent);
   font-size: 0.72rem;
@@ -231,7 +227,7 @@ main,
 .contact-section h2 {
   margin: 0.22rem 0 0;
   font-family: Newsreader, Iowan Old Style, Georgia, serif;
-  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  font-size: clamp(1.65rem, 3.6vw, 2.25rem);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 1.08;
@@ -239,18 +235,18 @@ main,
 
 .section-heading__intro {
   max-width: 720px;
-  margin: 0.85rem 0 0;
+  margin: 0.65rem 0 0;
   color: var(--muted);
 }
 
 .live-work__list {
   display: grid;
-  gap: 1.35rem;
+  gap: 0.85rem;
 }
 
 .live-work__item {
   border-top: 1px solid rgba(222, 213, 198, 0.9);
-  padding: 1.25rem 0 1.35rem;
+  padding: 0.95rem 0 1rem;
 }
 
 .live-work__item:first-child {
@@ -268,7 +264,7 @@ main,
 
 .live-work__heading h3 {
   margin: 0;
-  font-size: clamp(1.28rem, 2.4vw, 1.55rem);
+  font-size: clamp(1.1rem, 2.1vw, 1.28rem);
   line-height: 1.16;
 }
 
@@ -289,77 +285,81 @@ main,
 }
 
 .live-work__item p {
-  margin: 0.7rem 0 0;
+  margin: 0.5rem 0 0;
   color: var(--muted);
 }
 
 .live-work__facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.38rem 1.2rem;
-  margin: 0.95rem 0 0;
-  padding: 0;
-  padding-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.18rem 0.55rem;
+  margin: 0.65rem 0 0;
+  padding: 0.6rem 0 0;
   border-top: 1px solid rgba(222, 213, 198, 0.9);
   list-style: none;
 }
 
 .live-work__facts li {
+  display: inline-flex;
+  gap: 0.24rem;
+  align-items: baseline;
   padding-top: 0;
+}
+
+.live-work__facts li:not(:last-child)::after {
+  content: '·';
+  margin-left: 0.32rem;
+  color: var(--line);
 }
 
 .live-work__facts strong {
   display: block;
   color: var(--ink);
   font-family: Geist, Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 750;
   letter-spacing: -0.015em;
   line-height: 1.35;
 }
 
-.live-work__facts span {
+.live-work__facts span,
+.live-work__facts a {
   display: block;
   margin-top: 0.02rem;
   color: var(--faint);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   line-height: 1.4;
 }
 
+.live-work__facts a:hover {
+  color: var(--link);
+}
+
 .live-work__closing {
-  margin: 1.25rem 0 0;
+  margin: 0.95rem 0 0;
   color: var(--ink);
   font-family: Newsreader, Iowan Old Style, Georgia, serif;
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
   line-height: 1.55;
 }
 
-.work-note,
-.principle-grid,
-.notes-grid,
-.system-list {
+.work-note {
   display: grid;
   gap: 0;
 }
 
-.work-note__item,
-.principle-card,
-.note-card,
-.system-card {
+.work-note__item {
   border-top: 1px solid rgba(222, 213, 198, 0.9);
-  padding: 1.2rem 0;
+  padding: 0.95rem 0;
 }
 
-.work-note__item:first-child,
-.principle-card:first-child,
-.note-card:first-child,
-.system-card:first-child {
+.work-note__item:first-child {
   border-top: 0;
 }
 
 .work-note__item span {
   display: block;
-  margin-bottom: 0.28rem;
+  margin-bottom: 0.12rem;
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 800;
@@ -367,10 +367,7 @@ main,
   text-transform: uppercase;
 }
 
-.work-note__item h3,
-.principle-card h3,
-.note-card h3,
-.system-card h3 {
+.work-note__item h3 {
   margin: 0;
   color: var(--ink);
   font-size: clamp(1.1rem, 2.2vw, 1.34rem);
@@ -380,132 +377,18 @@ main,
 }
 
 .work-note__item p,
-.principle-card p,
-.note-card p,
-.system-card__description,
-.system-card__mattered li,
-.system-card__texture,
 .contact-section__main,
 .contact-section__support {
   color: var(--muted);
 }
 
-.work-note__item p,
-.principle-card p,
-.note-card p {
-  margin: 0.38rem 0 0;
-}
-
-.system-card {
-  display: block;
-}
-
-.system-card__category {
-  margin-bottom: 0.35rem;
-}
-
-.system-card__description {
-  margin: 0.65rem 0 0;
-}
-
-.system-card__mattered {
-  margin-top: 0.85rem;
-}
-
-.system-card__mattered p {
-  margin: 0 0 0.25rem;
-  color: var(--ink);
-  font-size: 0.92rem;
-  font-weight: 750;
-}
-
-.system-card__mattered ul {
-  display: grid;
-  gap: 0.18rem;
-  margin: 0;
-  padding-left: 1.1rem;
-}
-
-.system-card__texture {
-  margin: 0.85rem 0 0;
-  font-family: Newsreader, Iowan Old Style, Georgia, serif;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.metadata-row {
-  margin-top: 0.7rem;
-  color: var(--faint);
-}
-
-.system-panel {
-  margin-top: 0.95rem;
-  border-left: 2px solid var(--line);
-  padding-left: 1rem;
-}
-
-.system-panel__grid {
-  display: none;
-}
-
-.system-panel__inner {
-  display: grid;
-  gap: 0.7rem;
-}
-
-.system-panel__facts {
-  display: grid;
-  gap: 0.4rem;
-  margin: 0;
-}
-
-.system-panel__facts div {
-  display: grid;
-  grid-template-columns: minmax(6.5rem, 0.32fr) minmax(0, 1fr);
-  gap: 0.8rem;
-}
-
-.system-panel__facts dt {
-  color: var(--faint);
-  font-size: 0.78rem;
-  font-weight: 750;
-}
-
-.system-panel__facts dd {
-  margin: 0;
-  color: var(--ink);
-}
-
-.principle-card__mark {
-  display: none;
-}
-
-.note-card {
-  display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 0.35rem 1rem;
-}
-
-.note-card__tag {
-  grid-row: span 3;
-  color: var(--faint);
-}
-
-.note-card__soon {
-  color: var(--faint);
-  font-size: 0.82rem;
-}
-
-.personal-line {
-  margin: 1.2rem 0 0;
-  color: var(--muted);
-  font-family: Newsreader, Iowan Old Style, Georgia, serif;
-  font-size: 1.02rem;
+.work-note__item p {
+  margin: 0.25rem 0 0;
 }
 
 .contact-section {
   border-top: 1px solid var(--line);
-  padding: clamp(2.3rem, 5vw, 3.7rem) 0 0;
+  padding: clamp(1.75rem, 4vw, 2.6rem) 0 0;
 }
 
 .contact-section__inner {
@@ -514,13 +397,13 @@ main,
 
 .contact-section__main,
 .contact-section__support {
-  margin: 0.85rem 0 0;
+  margin: 0.55rem 0 0;
 }
 
 .site-footer {
   border-top: 1px solid var(--line);
-  margin-top: clamp(2.8rem, 7vw, 4.8rem);
-  padding: 1.5rem 0 2.5rem;
+  margin-top: clamp(2rem, 5vw, 3.2rem);
+  padding: 1.2rem 0 2rem;
   color: var(--muted);
   font-size: 0.9rem;
 }
@@ -617,16 +500,6 @@ main,
 
   .site-nav__links {
     justify-content: flex-start;
-  }
-
-  .note-card,
-  .system-panel__facts div,
-  .live-work__facts {
-    grid-template-columns: 1fr;
-  }
-
-  .note-card__tag {
-    grid-row: auto;
   }
 
   .hero-section h1 {

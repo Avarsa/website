@@ -20,7 +20,15 @@
         <ul class="live-work__facts" aria-label="Production facts">
           <li v-for="fact in item.facts" :key="`${item.title}-${fact.label}`">
             <strong>{{ fact.value }}</strong>
-            <span>{{ fact.label }}</span>
+            <a
+              v-if="fact.href"
+              :href="fact.href"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ fact.label }}
+            </a>
+            <span v-else>{{ fact.label }}</span>
           </li>
         </ul>
       </article>
