@@ -70,12 +70,6 @@ home_page = "jinish"
 # automatically create page for each record of this doctype
 website_generators = ["Blog Post"]
 
-# Website Route Rules
-# -------------------
-website_route_rules = [
-	{"from_route": "/jinish/<path:app_path>", "to_route": "jinish"},
-]
-
 # Jinja
 # ----------
 
