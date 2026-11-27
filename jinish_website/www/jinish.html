@@ -19,6 +19,7 @@
       :root {
         --paper: #fbf7ef;
         --ink: #22211f;
+        --muted: #5d584f;
         --link: #24594c;
         --rule: #ded5c6;
         background: var(--paper);
@@ -28,14 +29,14 @@
       body {
         margin: 0;
         font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
-        font-size: clamp(1.125rem, 1rem + 0.45vw, 1.375rem);
-        line-height: 1.65;
+        font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+        line-height: 1.55;
       }
 
       main {
-        max-width: 44rem;
+        max-width: 47rem;
         margin-inline: auto;
-        padding: clamp(2.75rem, 9vw, 7rem) clamp(1.25rem, 5vw, 2rem) 3rem;
+        padding: clamp(2rem, 7vw, 5.5rem) clamp(1.25rem, 5vw, 2rem) 3rem;
       }
 
       header {
@@ -43,8 +44,6 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 0.75rem 1rem;
-        padding-block-end: 1.25rem;
-        border-block-end: 1px solid var(--rule);
       }
 
       img {
@@ -61,8 +60,99 @@
         line-height: 1.2;
       }
 
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.25;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
       p {
-        margin: 1.25rem 0 0;
+        margin: 0;
+      }
+
+      .location {
+        margin-block-start: 0.25rem;
+        color: var(--muted);
+        font-size: 0.9375rem;
+      }
+
+      .intro {
+        max-width: 60ch;
+        margin-block: 1.25rem 1.65rem;
+        font-size: clamp(1.125rem, 1rem + 0.45vw, 1.375rem);
+      }
+
+      .current {
+        display: grid;
+        gap: 0.4rem 1.25rem;
+        padding-block: 0.85rem;
+        border-block: 1px solid var(--rule);
+      }
+
+      .current h2 {
+        font-size: 1.05rem;
+      }
+
+      .systems {
+        margin-block-start: 1.8rem;
+      }
+
+      .systems > h2 {
+        margin-block-end: 0.4rem;
+      }
+
+      .project {
+        display: grid;
+        gap: 0.4rem 1.25rem;
+        padding-block: 1rem;
+      }
+
+      .project + .project {
+        border-block-start: 1px solid var(--rule);
+      }
+
+      .metrics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem 1.15rem;
+        margin: 0.55rem 0 0;
+        padding: 0;
+        list-style: none;
+        color: var(--muted);
+        font-size: 0.9375rem;
+      }
+
+      .metrics strong {
+        color: var(--ink);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .project-note {
+        margin-block-start: 0.55rem;
+        color: var(--muted);
+        font-size: 0.9375rem;
+      }
+
+      footer {
+        margin-block-start: 0.55rem;
+        padding-block-start: 0.85rem;
+        border-block-start: 1px solid var(--rule);
+      }
+
+      @media (min-width: 42rem) {
+        .current,
+        .project {
+          grid-template-columns: 10rem minmax(0, 1fr);
+          align-items: baseline;
+        }
       }
 
       a {
@@ -86,21 +176,59 @@
     <main>
       <header>
         <img src="/assets/jinish_website/images/jinish-face.jpg" width="56" height="56" alt="">
-        <h1>Jinish Chandrababu</h1>
+        <div>
+          <h1>Jinish Chandrababu</h1>
+          <p class="location">Software developer in Daman, India</p>
+        </div>
       </header>
-      <p>
-        Hi, I’m Jinish, a software developer in Daman, India. I start by learning how people do their work,
-        build around the rules and exceptions they deal with, and improve the software as they use it.
-        The <a href="https://dnhddexcise.in/">Excise Operations and Licensing System</a> (EOLS) manages over 1,000 active licences
-        and has generated more than 100,000 permits. The territory’s excise trade relies on EOLS for permits and approvals
-        for every regulated movement, from local transport to interstate and international shipments. Excise revenue has crossed ₹410 crore.
-        Through ArchVerity, <a href="https://pdadaman.in/">PDA Daman</a> has issued more than 150 construction permissions,
-        about 50 plinth certificates and nearly 10 occupancy certificates, and collected over ₹22 crore in revenue.
-        ArchVerity also runs at <a href="https://buildings.dmcdaman.in">Daman Municipal Council</a>.
-        The <a href="https://dnhddhotels.in/">tourism registration portal</a> is live.
-        I’m currently building <a href="https://ecotheta.com/">Ecotheta</a>.
-        <a href="mailto:jinish@outlook.com">Say hello.</a>
+      <p class="intro">
+        I like building software for work that has to get done every day. I start by learning the rules and the exceptions,
+        then refine the software with the people who use it.
       </p>
+
+      <section class="current" aria-labelledby="current-work">
+        <h2 id="current-work">Current work</h2>
+        <p>I’m building <a href="https://ecotheta.com/">Ecotheta</a>, software for industrial environmental reporting and emissions reduction planning.</p>
+      </section>
+
+      <section class="systems" aria-labelledby="systems-in-use">
+        <h2 id="systems-in-use">Systems in use</h2>
+
+        <article class="project" aria-labelledby="eols">
+          <h3 id="eols"><a href="https://dnhddexcise.in/">EOLS</a></h3>
+          <div>
+            <p>The Excise Operations and Licensing System handles permits and approvals for every regulated movement of excisable goods in the territory, from local transport to interstate and international shipments.</p>
+            <ul class="metrics" role="list" aria-label="EOLS figures">
+              <li><strong>100,000+</strong> permits generated</li>
+              <li><strong>1,000+</strong> active licences</li>
+              <li><strong>₹410 crore+</strong> in excise revenue</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="archverity">
+          <h3 id="archverity">ArchVerity</h3>
+          <div>
+            <p>At <a href="https://pdadaman.in/">PDA Daman</a>, ArchVerity checks CAD drawings against building regulations and tracks applications through to occupancy certification.</p>
+            <ul class="metrics" role="list" aria-label="PDA Daman figures">
+              <li><strong>150+</strong> construction permissions</li>
+              <li><strong>About 50</strong> plinth certificates</li>
+              <li><strong>Nearly 10</strong> occupancy certificates</li>
+              <li><strong>₹22 crore+</strong> in PDA revenue</li>
+            </ul>
+            <p class="project-note">Also in use at <a href="https://buildings.dmcdaman.in">Daman Municipal Council</a>.</p>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="tourism">
+          <h3 id="tourism"><a href="https://dnhddhotels.in/">Tourism registration</a></h3>
+          <p>The registration portal for hotels in Dadra &amp; Nagar Haveli and Daman &amp; Diu is live.</p>
+        </article>
+      </section>
+
+      <footer>
+        <a href="mailto:jinish@outlook.com">Say hello by email</a>
+      </footer>
     </main>
   </body>
 </html>
