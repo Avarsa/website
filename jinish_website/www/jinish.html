@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jinish Chandrababu</title>
-    <meta name="description" content="Jinish Chandrababu, a software developer in Daman. Projects include EOLS, ArchVerity, the tourism registration portal and Ecotheta.">
+    <meta name="description" content="Jinish Chandrababu leads, designs and builds software projects from Daman, India. His work includes EOLS, ArchVerity and Ecotheta.">
     <link rel="canonical" href="https://jinish.in/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jinish.in/">
     <meta property="og:title" content="Jinish Chandrababu">
-    <meta property="og:description" content="Software developer in Daman. Currently building Ecotheta.">
+    <meta property="og:description" content="Software builder and project lead in Daman, India. From the first conversation to production.">
     <meta property="og:image" content="https://jinish.in/assets/jinish_website/images/jinish-face.jpg">
     <meta property="og:image:width" content="640">
     <meta property="og:image:height" content="640">
@@ -82,10 +82,14 @@
         margin: 0;
       }
 
-      .location {
+      .byline {
         margin-block-start: 0.25rem;
         color: var(--muted);
         font-size: 0.9375rem;
+      }
+
+      .byline-location {
+        white-space: nowrap;
       }
 
       .intro {
@@ -121,6 +125,37 @@
 
       .project + .project {
         border-block-start: 1px solid var(--rule);
+      }
+
+      .project-subtitle {
+        margin-block-start: 0.25rem;
+        color: var(--muted);
+        font-size: 0.9375rem;
+        line-height: 1.35;
+      }
+
+      .project-scope {
+        display: grid;
+        gap: 0.65rem;
+        margin: 0.85rem 0 0;
+        padding-block-start: 0.75rem;
+        border-block-start: 1px solid var(--rule);
+        font-size: 1rem;
+        line-height: 1.45;
+      }
+
+      .project-scope > div {
+        display: grid;
+        gap: 0.15rem 0.8rem;
+      }
+
+      .project-scope dt {
+        font-weight: 600;
+      }
+
+      .project-scope dd {
+        margin: 0;
+        color: var(--muted);
       }
 
       .metrics {
@@ -159,6 +194,12 @@
         }
       }
 
+      @media (min-width: 48rem) {
+        .project-scope > div {
+          grid-template-columns: 9.25rem minmax(0, 1fr);
+        }
+      }
+
       a {
         color: var(--link);
         text-decoration-thickness: 1px;
@@ -182,12 +223,12 @@
         <img src="/assets/jinish_website/images/jinish-face.jpg" width="39" height="39" alt="">
         <div>
           <h1>Jinish Chandrababu</h1>
-          <p class="location">Software developer in Daman, India</p>
+          <p class="byline">Software builder and project lead <span class="byline-location">in Daman, India</span></p>
         </div>
       </header>
       <p class="intro">
-        I like building software for work that has to get done every day. I start by learning the rules and the exceptions,
-        then refine the software with the people who use it.
+        I lead software projects from the first conversation to production. I learn the work from the people who do it,
+        agree on what the system needs to handle, then design and build it.
       </p>
 
       <section class="current" aria-labelledby="current-work">
@@ -199,16 +240,33 @@
         <h2 id="systems-in-use">Systems in use</h2>
 
         <article class="project" aria-labelledby="eols">
-          <h3 id="eols"><a href="https://dnhddexcise.in/">EOLS</a></h3>
           <div>
-            <p>Distilleries and breweries use the Excise Operations and Licensing System to record spirit production
-              (extra neutral alcohol, rectified spirit and denatured spirit), blending and bottling. It also handles
-              approvals and permits for local, interstate and international movement of excisable goods.</p>
+            <h3 id="eols"><a href="https://dnhddexcise.in/">EOLS</a></h3>
+            <p class="project-subtitle">Excise Operations and Licensing System</p>
+          </div>
+          <div>
+            <p>Used by the Excise Department across all three districts: Daman, Diu and Dadra &amp; Nagar Haveli.</p>
             <ul class="metrics" role="list" aria-label="EOLS figures">
               <li><strong>100,000+</strong> permits generated</li>
               <li><strong>1,000+</strong> active licences</li>
               <li><strong>₹410 crore+</strong> in excise revenue</li>
             </ul>
+            <dl class="project-scope">
+              <div>
+                <dt>Production &amp; trade</dt>
+                <dd>Distilleries and breweries need approval to move stock during production. EOLS handles wholesale and
+                  industrial imports, exports, and supply to bars, wine shops and hotels.</dd>
+              </div>
+              <div>
+                <dt>Licensing &amp; fees</dt>
+                <dd>Businesses register labels and renew licences through EOLS, which calculates and collects duties and fees.</dd>
+              </div>
+              <div>
+                <dt>Checks &amp; oversight</dt>
+                <dd>Border guards verify permits by QR code and log crossings. EOLS supports reviews and approvals
+                  from station officers to the commissioner.</dd>
+              </div>
+            </dl>
           </div>
         </article>
 
