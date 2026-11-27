@@ -40,14 +40,18 @@
       }
 
       header {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
         align-items: center;
-        gap: 0.75rem 1rem;
+        gap: 0.75rem;
       }
 
-      img {
+      header img {
         display: block;
+        box-sizing: border-box;
+        width: 2.45rem;
+        height: 2.45rem;
+        border: 1px solid var(--rule);
         border-radius: 50%;
         object-fit: cover;
       }
@@ -175,7 +179,7 @@
   <body>
     <main>
       <header>
-        <img src="/assets/jinish_website/images/jinish-face.jpg" width="56" height="56" alt="">
+        <img src="/assets/jinish_website/images/jinish-face.jpg" width="39" height="39" alt="">
         <div>
           <h1>Jinish Chandrababu</h1>
           <p class="location">Software developer in Daman, India</p>
@@ -197,7 +201,9 @@
         <article class="project" aria-labelledby="eols">
           <h3 id="eols"><a href="https://dnhddexcise.in/">EOLS</a></h3>
           <div>
-            <p>The Excise Operations and Licensing System handles permits and approvals for every regulated movement of excisable goods in the territory, from local transport to interstate and international shipments.</p>
+            <p>Distilleries and breweries use the Excise Operations and Licensing System to record spirit production
+              (extra neutral alcohol, rectified spirit and denatured spirit), blending and bottling. It also handles
+              approvals and permits for local, interstate and international movement of excisable goods.</p>
             <ul class="metrics" role="list" aria-label="EOLS figures">
               <li><strong>100,000+</strong> permits generated</li>
               <li><strong>1,000+</strong> active licences</li>
